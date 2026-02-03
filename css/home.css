@@ -896,3 +896,11 @@ a.btn-order{
   flex: 1;
   min-width: 300px;
 }
+
+
+.swiper-slide img{
+  object-fit: cover;
+  height: 150px;
+  width: 120px;
+  box-shadow: 1px 1px 5px gainsboro;
+}
