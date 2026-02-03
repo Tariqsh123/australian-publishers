@@ -831,3 +831,68 @@ section.main-banner{
 a.btn-order{
   top: 20px;
 }
+
+.service-hero {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+  padding-top: 120px;
+  background: linear-gradient(0deg, #f6d067, #f6f3ea);
+  box-sizing: border-box;
+}
+
+.service-hero-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1200px;
+  width: 100%;
+  gap: 40px;
+  flex-wrap: wrap; /* For mobile responsiveness */
+}
+
+.service-left {
+  flex: 1;
+  min-width: 300px;
+}
+
+.service-left h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.service-left p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.service-left h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.offer-list {
+  list-style: none;
+  padding: 0;
+}
+
+.offer-list li {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+.offer-list li::before {
+  content: "✔"; /* Green tick */
+  position: absolute;
+  left: 0;
+  color: green;
+}
+
+.service-right {
+  flex: 1;
+  min-width: 300px;
+}

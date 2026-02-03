@@ -2,16 +2,19 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Document</title>
-    <meta name="description" content="">
-
+    <meta charset=utf-8>
+    <meta name=viewport content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>document</title>
+    <meta name=description content="" />
+    
     <style>
         .h1,
-        .h4,
-        h1 {
+        .h3,
+        .h5,
+        h1,
+        h2,
+        h3,
+        h4 {
             color: var(--bs-heading-color);
             font-weight: 500;
             line-height: 1.2;
@@ -19,15 +22,49 @@
             margin-top: 0
         }
 
+        h2 {
+            font-size: calc(1.325rem + .9vw)
+        }
+
+        .h5 {
+            font-size: 1.25rem
+        }
+
+        button,
+        input {
+            font-family: inherit;
+            font-size: inherit;
+            line-height: inherit;
+            margin: 0
+        }
+
         .h1,
-        .h4,
-        h1 {
+        .h3,
+        .h5,
+        h1,
+        h2,
+        h3,
+        h4 {
             color: #0f232c;
             display: inline-block
         }
 
         .h1,
-        h1 {
+        h1,
+        h2 {
+            font-family: MultiDisplay-Medium, sans-serif;
+            margin-bottom: 20px
+        }
+
+        h2 {
+            font-size: 35px
+        }
+
+        .h5 {
+            font-size: 22px
+        }
+
+        .h5 {
             font-family: MultiDisplay-Medium, sans-serif;
             margin-bottom: 20px
         }
@@ -39,8 +76,21 @@
                 font-size: 35px !important
             }
 
-            .h4 {
+            h2 {
+                font-size: 30px !important
+            }
+
+            .h3,
+            h3 {
+                font-size: 26px !important
+            }
+
+            h4 {
                 font-size: 22px !important
+            }
+
+            .h5 {
+                font-size: 20px !important
             }
         }
 
@@ -54,59 +104,17 @@
                 font-size: 32px !important
             }
 
+            h2 {
+                font-size: 30px !important
+            }
+
             .btn-order {
                 margin-top: 16px
             }
         }
 
-        section.award-banner .img-box {
-            position: absolute;
-            top: 0;
-            width: 100%;
-            z-index: -1
-        }
-
-        section.award-banner .img-box img {
-            width: 100%
-        }
-
         :root {
             --swiper-theme-color: #007aff
-        }
-
-        .swiper {
-            display: block;
-            list-style: none;
-            margin-left: auto;
-            margin-right: auto;
-            overflow: hidden;
-            padding: 0
-        }
-
-        .swiper,
-        .swiper-wrapper {
-            position: relative;
-            z-index: 1
-        }
-
-        .swiper-wrapper {
-            box-sizing: content-box;
-            display: flex;
-            height: 100%;
-            transform: translateZ(0);
-            width: 100%
-        }
-
-        .swiper-slide {
-            display: block;
-            flex-shrink: 0;
-            height: 100%;
-            position: relative;
-            width: 100%
-        }
-
-        :root {
-            --swiper-navigation-size: 44px
         }
 
         :root {
@@ -255,9 +263,13 @@
 
         .h1,
         .h2,
-        .h4,
+        .h3,
+        .h5,
         h1,
-        h2 {
+        h2,
+        h3,
+        h4,
+        h5 {
             color: var(--bs-heading-color);
             font-weight: 500;
             line-height: 1.2;
@@ -291,14 +303,32 @@
             }
         }
 
-        .h4 {
+        .h3,
+        h3 {
+            font-size: calc(1.3rem + .6vw)
+        }
+
+        @media (min-width:1200px) {
+
+            .h3,
+            h3 {
+                font-size: 1.75rem
+            }
+        }
+
+        h4 {
             font-size: calc(1.275rem + .3vw)
         }
 
         @media (min-width:1200px) {
-            .h4 {
+            h4 {
                 font-size: 1.5rem
             }
+        }
+
+        .h5,
+        h5 {
+            font-size: 1.25rem
         }
 
         p {
@@ -325,15 +355,21 @@
             border-radius: 0
         }
 
-        button {
+        button,
+        input,
+        textarea {
             font-family: inherit;
             font-size: inherit;
             line-height: inherit;
-            margin: 0;
+            margin: 0
+        }
+
+        button {
             text-transform: none
         }
 
         [type=button],
+        [type=submit],
         button {
             -webkit-appearance: button
         }
@@ -341,6 +377,10 @@
         ::-moz-focus-inner {
             border-style: none;
             padding: 0
+        }
+
+        textarea {
+            resize: vertical
         }
 
         ::-webkit-datetime-edit-day-field,
@@ -440,6 +480,10 @@
             width: 100%
         }
 
+        .gy-3 {
+            --bs-gutter-y: 1rem
+        }
+
         .gy-4 {
             --bs-gutter-y: 1.5rem
         }
@@ -452,15 +496,47 @@
         }
 
         @media (min-width:992px) {
-            .col-lg-4 {
-                flex: 0 0 auto;
-                width: 33.33333333%
-            }
-
             .col-lg-6 {
                 flex: 0 0 auto;
                 width: 50%
             }
+        }
+
+        .form-control {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            background-clip: padding-box;
+            background-color: var(--bs-body-bg);
+            border: var(--bs-border-width) solid var(--bs-border-color);
+            border-radius: var(--bs-border-radius);
+            color: var(--bs-body-color);
+            display: block;
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.5;
+            padding: .375rem .75rem;
+            width: 100%
+        }
+
+        .form-control::-webkit-date-and-time-value {
+            height: 1.5em;
+            margin: 0;
+            min-width: 85px
+        }
+
+        .form-control::-webkit-datetime-edit {
+            display: block;
+            padding: 0
+        }
+
+        .form-control::-moz-placeholder {
+            color: var(--bs-secondary-color);
+            opacity: 1
+        }
+
+        textarea.form-control {
+            min-height: calc(1.5em + .75rem + var(--bs-border-width)*2)
         }
 
         .collapse:not(.show) {
@@ -534,6 +610,12 @@
             text-decoration: none;
             white-space: nowrap;
             width: 100%
+        }
+
+        .dropdown-item.active {
+            background-color: var(--bs-dropdown-link-active-bg);
+            color: var(--bs-dropdown-link-active-color);
+            text-decoration: none
         }
 
         .nav-link {
@@ -666,30 +748,56 @@
             }
         }
 
-        .accordion-item:last-of-type>.accordion-collapse {
-            border-bottom-left-radius: var(--bs-accordion-border-radius);
-            border-bottom-right-radius: var(--bs-accordion-border-radius)
-        }
-
-        .accordion-body {
-            padding: var(--bs-accordion-body-padding-y) var(--bs-accordion-body-padding-x)
-        }
-
-        .accordion-flush>.accordion-item>.accordion-collapse {
-            border-radius: 0
-        }
-
         :root {
             --bs-carousel-indicator-active-bg: #fff;
             --bs-carousel-caption-color: #fff
         }
 
-        .d-none {
-            display: none !important
+        .spinner-border {
+            --bs-spinner-width: 2rem;
+            --bs-spinner-height: 2rem;
+            --bs-spinner-vertical-align: -0.125em;
+            --bs-spinner-border-width: 0.25em;
+            --bs-spinner-animation-speed: 0.75s;
+            --bs-spinner-animation-name: spinner-border;
+            animation: var(--bs-spinner-animation-speed) linear infinite var(--bs-spinner-animation-name);
+            border-radius: 50%;
+            border-right-color: currentcolor;
+            border: var(--bs-spinner-border-width) solid;
+            border-right: var(--bs-spinner-border-width) solid transparent;
+            display: inline-block;
+            height: var(--bs-spinner-height);
+            vertical-align: var(--bs-spinner-vertical-align);
+            width: var(--bs-spinner-width)
         }
 
-        .position-relative {
-            position: relative !important
+        @media (prefers-reduced-motion:reduce) {
+            .spinner-border {
+                --bs-spinner-animation-speed: 1.5s
+            }
+        }
+
+        .visually-hidden {
+            clip: rect(0, 0, 0, 0) !important;
+            border: 0 !important;
+            height: 1px !important;
+            margin: -1px !important;
+            overflow: hidden !important;
+            padding: 0 !important;
+            white-space: nowrap !important;
+            width: 1px !important
+        }
+
+        .visually-hidden:not(caption) {
+            position: absolute !important
+        }
+
+        .d-block {
+            display: block !important
+        }
+
+        .d-none {
+            display: none !important
         }
 
         .justify-content-end {
@@ -700,13 +808,21 @@
             align-items: center !important
         }
 
-        .ms-auto {
-            margin-left: auto !important
+        .align-self-center {
+            align-self: center !important
         }
 
-        .px-0 {
-            padding-left: 0 !important;
-            padding-right: 0 !important
+        .mx-auto {
+            margin-left: auto !important;
+            margin-right: auto !important
+        }
+
+        .mb-4 {
+            margin-bottom: 1.5rem !important
+        }
+
+        .ms-auto {
+            margin-left: auto !important
         }
 
         .pt-0 {
@@ -719,6 +835,22 @@
 
         .text-center {
             text-align: center !important
+        }
+
+        .text-danger {
+            --bs-text-opacity: 1;
+            color: rgba(var(--bs-danger-rgb), var(--bs-text-opacity)) !important
+        }
+
+        .text-white {
+            --bs-text-opacity: 1;
+            color: rgba(var(--bs-white-rgb), var(--bs-text-opacity)) !important
+        }
+
+        @media (min-width:768px) {
+            .text-md-end {
+                text-align: right !important
+            }
         }
 
         @media (min-width:992px) {
@@ -751,9 +883,13 @@
 
         .h1,
         .h2,
-        .h4,
+        .h3,
+        .h5,
         h1,
-        h2 {
+        h2,
+        h3,
+        h4,
+        h5 {
             color: #0f232c;
             display: inline-block
         }
@@ -776,13 +912,31 @@
             font-size: 35px
         }
 
-        .h4 {
+        .h3,
+        h3 {
+            font-size: 30px
+        }
+
+        .h3,
+        h3,
+        h4 {
             font-family: MultiDisplay-Medium, sans-serif;
             margin-bottom: 20px
         }
 
-        .h4 {
+        h4 {
             font-size: 24px
+        }
+
+        .h5,
+        h5 {
+            font-size: 22px
+        }
+
+        .h5,
+        h5 {
+            font-family: MultiDisplay-Medium, sans-serif;
+            margin-bottom: 20px
         }
 
         p {
@@ -903,21 +1057,16 @@
             }
         }
 
-        .star-icons {
-            align-items: center;
-            display: inline-flex;
-            gap: 2px;
-            justify-content: flex-start
+        input::-webkit-inner-spin-button,
+        input::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0
         }
 
-        .star-icons svg {
-            fill: #f90;
-            height: 18px;
-            width: 18px
-        }
-
-        .lazyload {
-            opacity: 0
+        input[type=number] {
+            -webkit-appearance: textfield;
+            appearance: textfield;
+            -moz-appearance: textfield
         }
 
         @media (min-width:1700px) {
@@ -942,6 +1091,33 @@
 
             header .navbar .contact-info li .nav-link {
                 padding: 12px 24px !important
+            }
+        }
+
+        @media (min-width:1200px)and (max-width:1399px) {
+
+            .h1,
+            h1 {
+                font-size: 35px !important
+            }
+
+            .h2,
+            h2 {
+                font-size: 30px !important
+            }
+
+            .h3,
+            h3 {
+                font-size: 26px !important
+            }
+
+            h4 {
+                font-size: 22px !important
+            }
+
+            .h5,
+            h5 {
+                font-size: 20px !important
             }
         }
 
@@ -1102,21 +1278,6 @@
         }
 
         @media (min-width:1200px)and (max-width:1399px) {
-
-            .h1,
-            h1 {
-                font-size: 35px !important
-            }
-
-            .h2,
-            h2 {
-                font-size: 30px !important
-            }
-
-            .h4 {
-                font-size: 22px !important
-            }
-
             header .navbar .navbar-nav .nav-link {
                 font-size: 15px
             }
@@ -1159,14 +1320,6 @@
         }
 
         @media (max-width:991px) {
-            section.cta-banner img {
-                display: none
-            }
-
-            section.award-banner .img-box {
-                display: none
-            }
-
             header .container {
                 max-width: 100%
             }
@@ -1195,8 +1348,9 @@
                 justify-content: flex-start
             }
 
-            section.main-banner .img-box {
-                display: none
+            section ul li {
+                justify-content: center;
+                width: 100% !important
             }
         }
 
@@ -1230,135 +1384,134 @@
             display: none
         }
 
-        section.main-banner {
-            background: #f6d067;
+        [v-cloak] {
+            display: none !important
+        }
+
+        section.services-banner {
             background: linear-gradient(0deg, #f6d067, #f6f3ea 60%);
-            min-height: 600px;
-            padding: 150px 0 70px
-        }
-
-        section.main-banner .container {
-            position: relative
-        }
-
-        section.main-banner .container .circle-vector {
-            bottom: -40px;
-            left: -5%;
-            position: absolute;
+            padding: 150px 0 70px;
             z-index: 0
         }
 
-        section.main-banner .container .col-lg-6 {
+        section.services-banner .container {
             position: relative
         }
 
-        section.main-banner .container .col-lg-6 .capsule-vector {
-            position: absolute;
-            right: -30px;
-            top: -30px;
-            z-index: -1
+        section.services-banner .container .col-lg-6 {
+            position: relative
         }
 
-        section.main-banner .h1 {
+        section.services-banner .h1 {
             color: #0f232c;
-            font-family: MultiDisplay-Regular, sans-serif;
-            font-size: 32px;
-            margin-bottom: 14px
+            font-size: 40px;
+            line-height: 48px;
+            margin-bottom: 16px
         }
 
-        section.main-banner .h1 span {
+        section.services-banner .h5 {
+            font-size: 24px
+        }
+
+        section.services-banner p {
+            font-size: 18px
+        }
+
+        section.services-banner ul {
+            padding-left: 0
+        }
+
+        section.services-banner ul li {
+            font-size: 16px
+        }
+
+        section.services-banner .h5 {
+            margin-bottom: 20px
+        }
+
+        section.services-banner .btn-order {
+            margin-left: 12px
+        }
+
+        section.services-banner form {
+            background: #feb92e;
+            border-radius: 10px;
+            color: #fff;
+            margin: 0 auto;
+            max-width: 576px;
+            padding: 25px 30px;
+            text-align: center
+        }
+
+        section.services-banner form .h3 {
+            color: #0f232c !important;
             display: block;
-            font-family: MultiDisplay-Medium, sans-serif;
-            font-size: 37px
+            font-size: 26px;
+            margin-bottom: 36px;
+            position: relative
         }
 
-        section.main-banner .h4 {
-            font-family: Saira-Medium, sans-serif;
-            font-size: 16px !important;
-            margin-bottom: 14px
+        section.services-banner form .h3:before {
+            background-color: #0f232c;
+            border-radius: 50em;
+            bottom: -14px;
+            content: "";
+            height: 2px;
+            left: 0;
+            margin: auto;
+            position: absolute;
+            right: 0;
+            width: 100px
         }
 
-        section.main-banner .h4 .star-icons {
-            gap: 0
+        section.services-banner form .form-control {
+            min-height: 48px
         }
 
-        section.main-banner .h4 .star-icons svg {
-            height: 16px;
-            width: 16px
+        section.services-banner form textarea.form-control {
+            min-height: 120px;
+            resize: none
         }
 
-        section.main-banner p {
-            margin-bottom: 30px
+        section.services-banner form .secure-badge {
+            color: #0f232c;
+            display: flex;
+            font-size: 13px;
+            gap: 10px;
+            text-align: left
         }
 
-        section.main-banner .col-12.col-lg-6 {
-            z-index: 1
+        section.services-banner form .secure-badge svg {
+            height: 30px;
+            width: 30px
         }
 
-        section.main-banner .btn-order {
-            margin-left: 10px
-        }
-
-        section.top-brands {
-            background-color: #2c1b18
-        }
-
-        section.book-lovers {
-            padding: 65px 0
-        }
-
-        section.book-lovers .h2 {
-            margin-bottom: 48px
-        }
-
-        section.book-lovers .simple-card {
-            background-color: #fff;
-            border-radius: 15px;
-            box-shadow: 0 6px 30px rgba(0, 0, 0, .1);
-            height: 100%;
-            padding: 30px 37px 15px
-        }
-
-        @media (min-width:1700px) {
-            section.main-banner:after {
-                left: 160px
-            }
+        section.service-sec-two {
+            padding: 60px 0 70px
         }
 
         @media (max-width:575px) {
-            section.main-banner {
-                align-content: center;
-                height: 100vh;
-                padding-top: 150px
+            section.services-banner .h1 {
+                line-height: 38px
             }
+        }
 
-            section.main-banner .h1 span {
-                display: inline;
-                font-size: unset
-            }
-
-            section.main-banner .btn-live {
-                display: block;
-                width: 100%
-            }
-
-            section.main-banner .btn-order {
-                display: block;
-                margin-left: 0;
-                margin-top: 16px;
-                width: 100%
+        @media (min-width:1200px)and (max-width:1399px) {
+            section.services-banner .h1 {
+                font-size: 30px !important;
+                line-height: 38px !important
             }
         }
     </style>
-    <script src="js/rocket-loader.min.js" data-cf-settings="c72f6a2fff90882ff2180662-|49"></script>
-    <link rel="stylesheet" href="css/home.css">
+    <script src="js/rocket-loader.min.js"></script>
+    <link rel="stylesheet" href="css/service.css" />
     <style>
         @font-face {
             font-display: swap;
             font-family: 'Saira-Light';
             font-style: normal;
             font-weight: 300;
-            src: url('fonts/saira-v21-latin-300.woff2') format('woff2');
+            src: url('https://www.australianpublishers.com.au/assets/fonts/vendor/saira/saira-v21-latin-300.woff2') format('woff2');
         }
 
         @font-face {
@@ -1366,7 +1519,7 @@
             font-family: 'Saira';
             font-style: normal;
             font-weight: 400;
-            src: url('fonts/saira-v21-latin-regular.woff2') format('woff2');
+            src: url('https://www.australianpublishers.com.au/assets/fonts/vendor/saira/saira-v21-latin-regular.woff2') format('woff2');
         }
 
         @font-face {
@@ -1374,7 +1527,7 @@
             font-family: 'Saira-Medium';
             font-style: normal;
             font-weight: 500;
-            src: url('fonts/saira-v21-latin-500.woff2') format('woff2');
+            src: url('https://www.australianpublishers.com.au/assets/fonts/vendor/saira/saira-v21-latin-500.woff2') format('woff2');
         }
 
         @font-face {
@@ -1382,7 +1535,7 @@
             font-family: 'Saira-SemiBold';
             font-style: normal;
             font-weight: 600;
-            src: url('fonts/saira-v21-latin-600.woff2') format('woff2');
+            src: url('https://www.australianpublishers.com.au/assets/fonts/vendor/saira/saira-v21-latin-600.woff2') format('woff2');
         }
 
         @font-face {
@@ -1390,7 +1543,7 @@
             font-family: 'Saira-Bold';
             font-style: normal;
             font-weight: 700;
-            src: url('fonts/saira-v21-latin-700.woff2') format('woff2');
+            src: url('https://www.australianpublishers.com.au/assets/fonts/vendor/saira/saira-v21-latin-700.woff2') format('woff2');
         }
 
         @font-face {
@@ -1398,7 +1551,7 @@
             font-family: 'MultiDisplay-Regular';
             font-style: normal;
             font-weight: 400;
-            src: url('fonts/multi-display-regular.woff2') format('woff2');
+            src: url('https://www.australianpublishers.com.au/assets/fonts/vendor/multi-display/multi-display-regular.woff2') format('woff2');
         }
 
         @font-face {
@@ -1406,10 +1559,10 @@
             font-family: 'MultiDisplay-Medium';
             font-style: normal;
             font-weight: 500;
-            src: url('fonts/multi-display-medium.woff2') format('woff2');
+            src: url('https://www.australianpublishers.com.au/assets/fonts/vendor/multi-display/multi-display-medium.woff2') format('woff2');
         }
     </style>
-    
+    <link rel="stylesheet" href="css/home.css">
 </head>
 
 <body>
@@ -1477,379 +1630,319 @@
         </div>
     </header>
     <main>
-        <section class="main-banner text-lg-start text-center">
-            <div class="container">
-                <div class="img-box">
-                    <img src="images/layer-circle.webp" class="img-fluid circle-vector" alt="">
-                </div>
-                <div class="row align-items-center">
-                    <div class="col-12 col-lg-6">
-                        <span class="h4"> Highly-Rated By Australian Association of Authors
-                            <div class="star-icons">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"> </path></svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"> <path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"> </path></svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"></path></svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"></path></svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M309.5 13.5C305.5 5.2 297.1 0 287.9 0s-17.6 5.2-21.6 13.5L197.7 154.8 44.5 177.5c-9 1.3-16.5 7.6-19.3 16.3s-.5 18.1 5.9 24.5L142.2 328.4 116 483.9c-1.5 9 2.2 18.1 9.7 23.5s17.3 6 25.3 1.7l137-73.2 137 73.2c8.1 4.3 17.9 3.7 25.3-1.7s11.2-14.5 9.7-23.5L433.6 328.4 544.8 218.2c6.5-6.4 8.7-15.9 5.9-24.5s-10.3-14.9-19.3-16.3L378.1 154.8 309.5 13.5zM288 384.7l0-305.6 52.5 108.1c3.5 7.1 10.2 12.1 18.1 13.3l118.3 17.5L391 303c-5.5 5.5-8.1 13.3-6.8 21l20.2 119.6L299.2 387.5c-3.5-1.9-7.4-2.8-11.2-2.8z"> </path></svg>
-                            </div>
-                        </span>
-                        <h1 class="h1">Australia’s Top-Rated Publishing <span>House For Instant Book Launch</span></h1>
-                        <p>Australian Publishers is a renowned self-publishing company known for taking your stories to
-                            the leading platforms worldwide within 2 weeks.</p>
-                            <a href="get-started.html" class="btn-live">Publish My Book</a>
-                            <a href="contact-us.html" role="button" type="button" class="btn-order horizontal-shaking">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="24" viewBox="0 0 640 512"><path d="M208 352c114.9 0 208-78.8 208-176S322.9 0 208 0S0 78.8 0 176c0 38.6 14.7 74.3 39.6 103.4c-3.5 9.4-8.7 17.7-14.2 24.7c-4.8 6.2-9.7 11-13.3 14.3c-1.8 1.6-3.3 2.9-4.3 3.7c-.5 .4-.9 .7-1.1 .8l-.2 .2s0 0 0 0s0 0 0 0C1 327.2-1.4 334.4 .8 340.9S9.1 352 16 352c21.8 0 43.8-5.6 62.1-12.5c9.2-3.5 17.8-7.4 25.2-11.4C134.1 343.3 169.8 352 208 352zM448 176c0 112.3-99.1 196.9-216.5 207C255.8 457.4 336.4 512 432 512c38.2 0 73.9-8.7 104.7-23.9c7.5 4 16 7.9 25.2 11.4c18.3 6.9 40.3 12.5 62.1 12.5c6.9 0 13.1-4.5 15.2-11.1c2.1-6.6-.2-13.8-5.8-17.9c0 0 0 0 0 0s0 0 0 0l-.2-.2c-.2-.2-.6-.4-1.1-.8c-1-.8-2.5-2-4.3-3.7c-3.6-3.3-8.5-8.1-13.3-14.3c-5.5-7-10.7-15.4-14.2-24.7c24.9-29 39.6-64.7 39.6-103.4c0-92.8-84.9-168.9-192.6-175.5c.4 5.1 .6 10.3 .6 15.5z"fill="currentColor"></path></svg> 
-                                Consult Our Expert 
-                            </a>
-                    </div>
-                    <div class="col-12 col-lg-6">
-                        <div class="img-box">
-                            <img src="images/layer-capsule.webp" class="img-fluid capsule-vector" alt="">
-                            <img src="images/top-rated-book-publishing-agency-in-australia.webp" class="img-fluid" alt="">
+       <section class="service-hero">
+  <div class="service-hero-container">
+    <!-- Left Content -->
+    <div class="service-left">
+  <h1>Boost Your Book's Reach with Our Expert Marketing Services</h1>
+  <p>AustralianPublishers.com.au helps authors market their books effectively, reaching bookstores and online readers to maximize visibility and sales.</p>
+  
+  <h3>What We Offer:</h3>
+  <ul class="offer-list">
+    <li>Targeted Marketing Campaigns for Maximum Exposure.</li>
+    <li>Guidance from Experienced Book Marketing Professionals.</li>
+    <li>Proven Strategies to Increase Sales and Reader Engagement.</li>
+  </ul>
 
+  <a href="get-started.html" class="btn-live">Start Marketing My Book</a>
+  
+  <a href="contact-us.html" role="button" type="button" class="btn-order horizontal-shaking">
+    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="24" viewBox="0 0 640 512">
+      <path d="M208 352c114.9 0 208-78.8 208-176S322.9 0 208 0S0 78.8 0 176c0 38.6 14.7 74.3 39.6 103.4c-3.5 9.4-8.7 17.7-14.2 24.7c-4.8 6.2-9.7 11-13.3 14.3c-1.8 1.6-3.3 2.9-4.3 3.7c-.5 .4-.9 .7-1.1 .8l-.2 .2s0 0 0 0s0 0 0 0C1 327.2-1.4 334.4 .8 340.9S9.1 352 16 352c21.8 0 43.8-5.6 62.1-12.5c9.2-3.5 17.8-7.4 25.2-11.4C134.1 343.3 169.8 352 208 352zM448 176c0 112.3-99.1 196.9-216.5 207C255.8 457.4 336.4 512 432 512c38.2 0 73.9-8.7 104.7-23.9c7.5 4 16 7.9 25.2 11.4c18.3 6.9 40.3 12.5 62.1 12.5c6.9 0 13.1-4.5 15.2-11.1c2.1-6.6-.2-13.8-5.8-17.9c0 0 0 0 0 0s0 0 0 0l-.2-.2c-.2-.2-.6-.4-1.1-.8c-1-.8-2.5-2-4.3-3.7c-3.6-3.3-8.5-8.1-13.3-14.3c-5.5-7-10.7-15.4-14.2-24.7c24.9-29 39.6-64.7 39.6-103.4c0-92.8-84.9-168.9-192.6-175.5c.4 5.1 .6 10.3 .6 15.5z" fill="currentColor"></path>
+    </svg> 
+    Consult Our Expert 
+  </a>
+</div>
+
+
+    <!-- Right Form -->
+    <div class="service-right">
+      <div class="get-started-clean-form">
+        <h2>Ready To Publish?</h2>
+        <h3>Get a Quick Quote For Your Book Today!</h3>
+
+        <div class="form-grid">
+          <input type="text" placeholder="Name">
+          <input type="email" placeholder="Email">
+          <input type="tel" placeholder="Phone No.">
+          <select>
+            <option>Australia</option>
+            <option>USA</option>
+            <option>UK</option>
+          </select>
+          <input type="text" placeholder="Write Your Book Title">
+          <select>
+            <option>Genre</option>
+            <option>Fiction</option>
+            <option>Non Fiction</option>
+          </select>
+        </div>
+          <input type="file" style="margin-top: 10px;">
+
+        <textarea placeholder="Details"></textarea>
+
+        <p class="form-note">
+          Share All The Details About Your Manuscript: <strong>We Will Process It With Confidentiality.</strong>
+        </p>
+
+        <div class="form-bottom">
+          <button>SUBMIT</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+        <section class="service-sec-two text-center text-lg-start">
+            <div class="container">
+                <div class="row gy-4 align-items-center">
+                    <div class="col-12 col-lg-6">
+                        <img src=https://www.australianpublishers.com.au/assets/frontend/images/bg/best-book-marketing-company-in-australia.webp class="img-fluid d-block mx-auto" alt="" />
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <h2 class="h2">Book Marketing Service to Maximize Your Reach</h2>
+                        <p>Our book marketing services help authors reach the right audience, boost visibility, and drive sales through proven strategies and expert guidance.</p>
+                        <ul>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" width=20 height=20 viewBox="0 0 28 29" fill="none"> <path d="M0 13.384c.071-.53.121-1.065.218-1.59.723-3.927 2.757-7.006 6.049-9.247C8.169 1.25 10.288.52 12.573.275c.47-.05.947-.066 1.42-.067a1.03 1.03 0 0 1 1.052.974c.033.585-.34 1.047-.931 1.111-.588.064-1.183.067-1.769.146A11.44 11.44 0 0 0 6.45 5.032C4.49 6.662 3.118 8.7 2.51 11.185c-.999 4.091-.133 7.767 2.658 10.942 1.848 2.102 4.183 3.388 6.946 3.808 3.633.551 6.883-.368 9.679-2.777 1.844-1.59 3.1-3.57 3.691-5.935.212-.85.268-1.74.39-2.613.021-.153.007-.31.025-.464.074-.634.515-1.02 1.12-.987.567.03.982.492.98 1.105-.003 1.236-.142 2.46-.502 3.641-1.566 5.14-4.942 8.447-10.125 9.874-.749.206-1.541.256-2.313.378-.08.013-.16.032-.239.048h-1.64c-.07-.016-.14-.04-.211-.046-2.19-.154-4.24-.78-6.109-1.926-3.626-2.223-5.859-5.427-6.642-9.62C.12 16.09.07 15.554 0 15.025z" fill="#266733" /> <path d="M13.068 16.73c.1-.14.153-.24.23-.318L25.569 4.166c.3-.298.623-.502 1.066-.422a1.045 1.045 0 0 1 .635 1.693c-.068.085-.147.162-.225.239q-6.562 6.548-13.126 13.093c-.638.636-1.218.627-1.824-.032q-2.549-2.764-5.093-5.532c-.488-.531-.455-1.235.066-1.629.4-.3.93-.29 1.311.034.09.076.171.164.251.25q2.124 2.303 4.241 4.607c.056.058.098.128.197.263" fill="#266733" /> </svg>
+                                 2K+ Comic Books Published
+                            </li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" width=20 height=20 viewBox="0 0 28 29"fill="none"> <path d="M0 13.384c.071-.53.121-1.065.218-1.59.723-3.927 2.757-7.006 6.049-9.247C8.169 1.25 10.288.52 12.573.275c.47-.05.947-.066 1.42-.067a1.03 1.03 0 0 1 1.052.974c.033.585-.34 1.047-.931 1.111-.588.064-1.183.067-1.769.146A11.44 11.44 0 0 0 6.45 5.032C4.49 6.662 3.118 8.7 2.51 11.185c-.999 4.091-.133 7.767 2.658 10.942 1.848 2.102 4.183 3.388 6.946 3.808 3.633.551 6.883-.368 9.679-2.777 1.844-1.59 3.1-3.57 3.691-5.935.212-.85.268-1.74.39-2.613.021-.153.007-.31.025-.464.074-.634.515-1.02 1.12-.987.567.03.982.492.98 1.105-.003 1.236-.142 2.46-.502 3.641-1.566 5.14-4.942 8.447-10.125 9.874-.749.206-1.541.256-2.313.378-.08.013-.16.032-.239.048h-1.64c-.07-.016-.14-.04-.211-.046-2.19-.154-4.24-.78-6.109-1.926-3.626-2.223-5.859-5.427-6.642-9.62C.12 16.09.07 15.554 0 15.025z" fill="#266733" />  <path d="M13.068 16.73c.1-.14.153-.24.23-.318L25.569 4.166c.3-.298.623-.502 1.066-.422a1.045 1.045 0 0 1 .635 1.693c-.068.085-.147.162-.225.239q-6.562 6.548-13.126 13.093c-.638.636-1.218.627-1.824-.032q-2.549-2.764-5.093-5.532c-.488-.531-.455-1.235.066-1.629.4-.3.93-.29 1.311.034.09.076.171.164.251.25q2.124 2.303 4.241 4.607c.056.058.098.128.197.263" fill="#266733" /> </svg>
+                                100K+ Copies Sold Worldwide
+                            </li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" width=20 height=20 viewBox="0 0 28 29" fill="none"> <path d="M0 13.384c.071-.53.121-1.065.218-1.59.723-3.927 2.757-7.006 6.049-9.247C8.169 1.25 10.288.52 12.573.275c.47-.05.947-.066 1.42-.067a1.03 1.03 0 0 1 1.052.974c.033.585-.34 1.047-.931 1.111-.588.064-1.183.067-1.769.146A11.44 11.44 0 0 0 6.45 5.032C4.49 6.662 3.118 8.7 2.51 11.185c-.999 4.091-.133 7.767 2.658 10.942 1.848 2.102 4.183 3.388 6.946 3.808 3.633.551 6.883-.368 9.679-2.777 1.844-1.59 3.1-3.57 3.691-5.935.212-.85.268-1.74.39-2.613.021-.153.007-.31.025-.464.074-.634.515-1.02 1.12-.987.567.03.982.492.98 1.105-.003 1.236-.142 2.46-.502 3.641-1.566 5.14-4.942 8.447-10.125 9.874-.749.206-1.541.256-2.313.378-.08.013-.16.032-.239.048h-1.64c-.07-.016-.14-.04-.211-.046-2.19-.154-4.24-.78-6.109-1.926-3.626-2.223-5.859-5.427-6.642-9.62C.12 16.09.07 15.554 0 15.025z" fill="#266733" /> <path d="M13.068 16.73c.1-.14.153-.24.23-.318L25.569 4.166c.3-.298.623-.502 1.066-.422a1.045 1.045 0 0 1 .635 1.693c-.068.085-.147.162-.225.239q-6.562 6.548-13.126 13.093c-.638.636-1.218.627-1.824-.032q-2.549-2.764-5.093-5.532c-.488-.531-.455-1.235.066-1.629.4-.3.93-.29 1.311.034.09.076.171.164.251.25q2.124 2.303 4.241 4.607c.056.058.098.128.197.263" fill="#266733" /> </svg> 
+                                100% Creative Control
+                            </li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" width=20 height=20 viewBox="0 0 28 29" fill="none"> <path d="M0 13.384c.071-.53.121-1.065.218-1.59.723-3.927 2.757-7.006 6.049-9.247C8.169 1.25 10.288.52 12.573.275c.47-.05.947-.066 1.42-.067a1.03 1.03 0 0 1 1.052.974c.033.585-.34 1.047-.931 1.111-.588.064-1.183.067-1.769.146A11.44 11.44 0 0 0 6.45 5.032C4.49 6.662 3.118 8.7 2.51 11.185c-.999 4.091-.133 7.767 2.658 10.942 1.848 2.102 4.183 3.388 6.946 3.808 3.633.551 6.883-.368 9.679-2.777 1.844-1.59 3.1-3.57 3.691-5.935.212-.85.268-1.74.39-2.613.021-.153.007-.31.025-.464.074-.634.515-1.02 1.12-.987.567.03.982.492.98 1.105-.003 1.236-.142 2.46-.502 3.641-1.566 5.14-4.942 8.447-10.125 9.874-.749.206-1.541.256-2.313.378-.08.013-.16.032-.239.048h-1.64c-.07-.016-.14-.04-.211-.046-2.19-.154-4.24-.78-6.109-1.926-3.626-2.223-5.859-5.427-6.642-9.62C.12 16.09.07 15.554 0 15.025z" fill="#266733" /> <path d="M13.068 16.73c.1-.14.153-.24.23-.318L25.569 4.166c.3-.298.623-.502 1.066-.422a1.045 1.045 0 0 1 .635 1.693c-.068.085-.147.162-.225.239q-6.562 6.548-13.126 13.093c-.638.636-1.218.627-1.824-.032q-2.549-2.764-5.093-5.532c-.488-.531-.455-1.235.066-1.629.4-.3.93-.29 1.311.034.09.076.171.164.251.25q2.124 2.303 4.241 4.607c.056.058.098.128.197.263" fill="#266733" /> </svg>
+                                3X Faster Publishing Process
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-12 b-top">
+                        <div class="swiper brand-slider">
+                            <div class="swiper-wrapper align-items-center">
+                                <div class="swiper-slide">
+                                    <img src=https://www.australianpublishers.com.au/assets/frontend/images/slider-images/brand-1.svg class="img-fluid" alt=""/>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src=https://www.australianpublishers.com.au/assets/frontend/images/slider-images/brand-2.svg class="img-fluid" alt=""/>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src=https://www.australianpublishers.com.au/assets/frontend/images/slider-images/brand-3.svg class="img-fluid" alt="" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src=https://www.australianpublishers.com.au/assets/frontend/images/slider-images/brand-4.svg class="img-fluid" alt=""/>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src=https://www.australianpublishers.com.au/assets/frontend/images/slider-images/brand-5.svg class="img-fluid" alt=""/>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src=https://www.australianpublishers.com.au/assets/frontend/images/slider-images/brand-6.svg class="img-fluid" alt="" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src=https://www.australianpublishers.com.au/assets/frontend/images/slider-images/brand-7.svg class="img-fluid" alt="" />
+                                </div> 
+                                <div class="swiper-slide">
+                                    <img src=https://www.australianpublishers.com.au/assets/frontend/images/slider-images/brand-8.svg class="img-fluid" alt=""/>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src=https://www.australianpublishers.com.au/assets/frontend/images/slider-images/brand-9.svg class="img-fluid" alt="Brand" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src=https://www.australianpublishers.com.au/assets/frontend/images/slider-images/brand-10.svg class="img-fluid" alt=""  />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src=https://www.australianpublishers.com.au/assets/frontend/images/slider-images/brand-11.svg class="img-fluid" alt=""/>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="top-brands text-center">
-            <div class="container-fluid px-0">
-                <div class="swiper brand-slider">
-                    <div class="swiper-wrapper align-items-center">
-                        <div class="swiper-slide">
-                            <img src="images/brand-1.svg" class="img-fluid" alt=""/>
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="images/brand-2.svg" class="img-fluid" alt="" />
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="images/brand-3.svg" class="img-fluid" alt=""/>
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="images/brand-4.svg" class="img-fluid" alt=""/>
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="images/brand-5.svg" class="img-fluid" alt=""/>
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="images/brand-6.svg" class="img-fluid" alt=""/>
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="images/brand-7.svg" class="img-fluid" alt="">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="images/brand-8.svg" class="img-fluid" alt="">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="images/brand-9.svg" class="img-fluid" alt="">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="images/brand-10.svg" class="img-fluid" alt="Brand">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="images/brand-11.svg" class="img-fluid" alt="Brand">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="book-lovers text-center">
+        <section class="cta-area text-center">
             <div class="container">
                 <div class="row">
-                    <div class="col-12">
-                        <h2 class="h2">Why Australian Authors Trust Our Independent Book Publishing Services</h2>
+                   <div class="col-12 col-lg-8 col-md-10 mx-auto">
+                          <span class="sub-title">Reach Readers, Boost Sales</span>
+                          <h2 class="h2">No Audience, No Sales? Let Our Book Marketing Experts Give Your Book the Exposure It Needs!</h2>
+                        <a href="get-started.html" class="btn-live">Publish My Comic Book</a>
+                        <a href="contact-us.html"
+                            class="btn-call horizontal-shaking">
+                            <span class="icon-box">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"> <path d="M280 0C408.1 0 512 103.9 512 232c0 13.3-10.7 24-24 24s-24-10.7-24-24c0-101.6-82.4-184-184-184c-13.3 0-24-10.7-24-24s10.7-24 24-24zm8 192a32 32 0 1 1 0 64 32 32 0 1 1 0-64zm-32-72c0-13.3 10.7-24 24-24c75.1 0 136 60.9 136 136c0 13.3-10.7 24-24 24s-24-10.7-24-24c0-48.6-39.4-88-88-88c-13.3 0-24-10.7-24-24zM117.5 1.4c19.4-5.3 39.7 4.6 47.4 23.2l40 96c6.8 16.3 2.1 35.2-11.6 46.3L144 207.3c33.3 70.4 90.3 127.4 160.7 160.7L345 318.7c11.2-13.7 30-18.4 46.3-11.6l96 40c18.6 7.7 28.5 28 23.2 47.4l-24 88C481.8 499.9 466 512 448 512C200.6 512 0 311.4 0 64C0 46 12.1 30.2 29.5 25.4l88-24z" fill="currentColor" /> </svg>
+                            </span>
+                            <span><small>Give Us A Call</small> +61 290 991 615 </span>
+                        </a>
                     </div>
                 </div>
-                <div class="row position-relative gy-4">
-                    <div class="col-12 col-md-6 col-lg-4">
-                        <div class="simple-card">
-                            <div class="img-box">
-                                <img src="images/copyright-assurance.svg" class="img-fluid" alt="">
-                            </div>
-                            <span class="h5">100% Copyright Assurance</span>
-                            <p>We protect your intellectual property and give you complete ownership rights over your work. Precisely, your book will be 100% yours!</p>
-                        </div>
+            </div>
+        </section>
+        <section class="our-services text-center">
+            <div class="container">
+                <div class="row mb-3">
+                    <div class="col-lg-10 mx-auto text-center">
+                       <h2 class="h2">Top Reasons to Choose Our Australian Book Marketing Experts</h2>
+
                     </div>
-                    <div class="col-12 col-md-6 col-lg-4">
-                        <div class="simple-card">
-                            <div class="img-box">
-                                <img src="images/budget-friendly-pricing.svg" class="img-fluid" alt="">
-                            </div>
-                            <span class="h5">Budget-Friendly Pricing</span>
-                            <p>Our publishing services are priced affordably, ensuring you have to pay the cheapest rates for exceptionally reliable book launches.</p>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6 col-lg-4">
-                        <div class="simple-card">
-                            <div class="img-box">
-                                <img src="images/quick-global-launch.svg" class="img-fluid" alt="">
-                            </div>
-                            <span class="h5">Quick & Global Launch</span>
-                            <p>Let your book be live on every online bookstore with our strong distribution channel. We publish ultra-fast without any delay.</p>
-                        </div>
-                    </div>
-                    <div class="oval-shadow"></div>
                 </div>
-                <div class="btn-box">
-                    <a href="get-started.html" class="btn-live">Let’s Get Started</a>
-                    <a href="contact-us.html" class="btn-call horizontal-shaking">
-                        <span class="icon-box">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"> <path d="M280 0C408.1 0 512 103.9 512 232c0 13.3-10.7 24-24 24s-24-10.7-24-24c0-101.6-82.4-184-184-184c-13.3 0-24-10.7-24-24s10.7-24 24-24zm8 192a32 32 0 1 1 0 64 32 32 0 1 1 0-64zm-32-72c0-13.3 10.7-24 24-24c75.1 0 136 60.9 136 136c0 13.3-10.7 24-24 24s-24-10.7-24-24c0-48.6-39.4-88-88-88c-13.3 0-24-10.7-24-24zM117.5 1.4c19.4-5.3 39.7 4.6 47.4 23.2l40 96c6.8 16.3 2.1 35.2-11.6 46.3L144 207.3c33.3 70.4 90.3 127.4 160.7 160.7L345 318.7c11.2-13.7 30-18.4 46.3-11.6l96 40c18.6 7.7 28.5 28 23.2 47.4l-24 88C481.8 499.9 466 512 448 512C200.6 512 0 311.4 0 64C0 46 12.1 30.2 29.5 25.4l88-24z" fill="currentColor"></path></svg>
-                        </span>
-                        <span>
-                            <small>Consult Our Expert</small> +61 290 991 615 
-                        </span>
-                    </a>
+                <div class="row mb-4">
+                    <div class="col-lg-4 col-md-6 col-12">
+                        <div class="simple-card">
+                            <div class="img-box">
+                                <img src="https://www.australianpublishers.com.au/assets/frontend/images/icons/every-type-catered.svg" class="img-fluid lazyload" alt="" />
+                            </div>
+                            <span class="h4">Every Type Catered</span>
+                            <p>From superheroes to incredible web comics, we help you publish any type of comic and release it on every leading site.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-12">
+                        <div class="simple-card">
+                            <div class="img-box">
+                                <img src="https://www.australianpublishers.com.au/assets/frontend/images/icons/all-inclusive-services.svg" class="img-fluid lazyload" alt=""/>
+                            </div>
+                            <span class="h4">All-Inclusive Services</span>
+                            <p>We cover everything after comic writing. From illustration, layout, and distribution to marketing, we’ve got you covered.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-12">
+                        <div class="simple-card">
+                            <div class="img-box">
+                                <img src="https://www.australianpublishers.com.au/assets/frontend/images/icons/responsive-client-support.svg" class="img-fluid lazyload" alt=""/>
+                            </div>
+                            <span class="h4">Responsive Client Support</span>
+                            <p>Need instant assistance? Whether you need an update or a quote, our team is available 24/7 for real-time help.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row text-center">
+                    <div class="col-12 mt-3">
+                        <a href="get-started.html" class="btn-live">Hire Comic Book Publisher</a>
+                            <a href="comic-book-publishing.html" class="btn-call horizontal-shaking">
+                            <span class="icon-box">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"> <path d="M280 0C408.1 0 512 103.9 512 232c0 13.3-10.7 24-24 24s-24-10.7-24-24c0-101.6-82.4-184-184-184c-13.3 0-24-10.7-24-24s10.7-24 24-24zm8 192a32 32 0 1 1 0 64 32 32 0 1 1 0-64zm-32-72c0-13.3 10.7-24 24-24c75.1 0 136 60.9 136 136c0 13.3-10.7 24-24 24s-24-10.7-24-24c0-48.6-39.4-88-88-88c-13.3 0-24-10.7-24-24zM117.5 1.4c19.4-5.3 39.7 4.6 47.4 23.2l40 96c6.8 16.3 2.1 35.2-11.6 46.3L144 207.3c33.3 70.4 90.3 127.4 160.7 160.7L345 318.7c11.2-13.7 30-18.4 46.3-11.6l96 40c18.6 7.7 28.5 28 23.2 47.4l-24 88C481.8 499.9 466 512 448 512C200.6 512 0 311.4 0 64C0 46 12.1 30.2 29.5 25.4l88-24z" fill="currentColor" /> </svg>
+                            </span>
+                            <span><small>Talk To Specialist</small> +61 290 991 615 </span>
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
         <section class="about-area text-lg-start text-center">
             <div class="container">
                 <div class="row align-items-center">
-                    <div class="col-12 col-lg-6">
-                        <span class="sub-title">Launch Your Book Worldwide</span>
-                        <h2 class="h2">Best Australian Book Publishers Releasing Your Books on 30+ Platforms</h2>
-                        <p>Being one of Australia's finest book publishing houses, we focus on your book’s success. For that, we make your book go live on any platform that you like. Whether it’s major self-publishing sites like Amazon KDP and Apple Books or your targeted platforms, Kobo, and Barnes & Noble, we have got you covered. We don’t just publish but do it strategically to ensure your book release earns you visibility. All you have to do is write, and we’ll do what we’re great at—effortless publishing. Get our publishers on board and take your book across the border.</p>
-                    </div>
-                    <div class="col-12 col-lg-6 text-center">
-                        <img src="https://www.australianpublishers.com.au/assets/frontend/images/bg/best-australian-book-publishers.webp" class="img-fluid lazyload" alt="">
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="our-services text-center text-lg-start">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-10 mx-auto text-center">
-                        <h2 class="h2">Book Publishing Company Providing Complete Range of Services under One Roof</h2>
-                        <p>We are known to be the best self-publishing company in Australia due to our all-inclusive services. At our agency, we go beyond just publishing and offer all the related services, ensuring your book is ready to deliver exciting results.</p>
-                    </div>
-                </div>
-                <div class="row mb-4 gy-5">
-                    <div class="col-lg-4 col-md-6 col-12">
-                        <div class="simple-card">
-                            <img src="https://www.australianpublishers.com.au/assets/frontend/images/icons/book-editing-proofreading.svg" class="img-fluid lazyload d-block mx-auto ms-lg-0" alt="">
-                                <span class="h4">Book Editing & Proofreading</span>
-                            <p>With our expert book editing and proofreading services, your book will be polished enough to be published online. We refine and fix everything from grammar and narrative to flow, making sure your manuscript is transformed into a book.</p>
+                    <div class="col-lg-6">
+                        <h2 class="h2">Promote Your Book on 30+ Leading Online Platforms</h2>
+                        <p>Your search for ‘best book marketing services near me’ ends here. We have all the expertise you need to make your book reach the right audience and achieve maximum visibility.</p>
+                        <p>Kickstart your book’s journey and get it noticed everywhere. Whether on Kindle, Kobo, Apple Books, Lulu, IngramSpark, or other platforms, we ensure your book gets the exposure it deserves.</p>
+
+                        <div class="btn-box">
+                            <a href="get-started.html" class="btn-live">Tell Us What You Need</a>
+                            <a href="contact-us.html" role="button" type=button class="btn-order horizontal-shaking">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width=28 height=24 viewBox="0 0 640 512"> <path d="M208 352c114.9 0 208-78.8 208-176S322.9 0 208 0S0 78.8 0 176c0 38.6 14.7 74.3 39.6 103.4c-3.5 9.4-8.7 17.7-14.2 24.7c-4.8 6.2-9.7 11-13.3 14.3c-1.8 1.6-3.3 2.9-4.3 3.7c-.5 .4-.9 .7-1.1 .8l-.2 .2s0 0 0 0s0 0 0 0C1 327.2-1.4 334.4 .8 340.9S9.1 352 16 352c21.8 0 43.8-5.6 62.1-12.5c9.2-3.5 17.8-7.4 25.2-11.4C134.1 343.3 169.8 352 208 352zM448 176c0 112.3-99.1 196.9-216.5 207C255.8 457.4 336.4 512 432 512c38.2 0 73.9-8.7 104.7-23.9c7.5 4 16 7.9 25.2 11.4c18.3 6.9 40.3 12.5 62.1 12.5c6.9 0 13.1-4.5 15.2-11.1c2.1-6.6-.2-13.8-5.8-17.9c0 0 0 0 0 0s0 0 0 0l-.2-.2c-.2-.2-.6-.4-1.1-.8c-1-.8-2.5-2-4.3-3.7c-3.6-3.3-8.5-8.1-13.3-14.3c-5.5-7-10.7-15.4-14.2-24.7c24.9-29 39.6-64.7 39.6-103.4c0-92.8-84.9-168.9-192.6-175.5c.4 5.1 .6 10.3 .6 15.5z" fill="currentColor" /> </svg> 
+                                Consult Our Expert 
+                            </a>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6 col-12">
-                        <div class="simple-card">
-                            <img src="https://www.australianpublishers.com.au/assets/frontend/images/icons/book-marketing.svg" class="img-fluid lazyload d-block mx-auto ms-lg-0" alt="">
-                                <span class="h4">Book Marketing</span>
-                            <p>Our book marketers focus on tailored marketing strategies so that your book gets  visibility in its target audience. Whether paid social media campaigns, unpaid reviews, or author interviews, we do it all to boost the sales of your book.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-12">
-                        <div class="simple-card">
-                            <img src="https://www.australianpublishers.com.au/assets/frontend/images/icons/book-cover-design.svg" class="img-fluid lazyload d-block mx-auto ms-lg-0" alt="">
-                            <span class="h4">Book Cover Design</span>
-                            <p>Get an attractive and professional book cover that reveals the right amount of story on the cover. With the focus on aesthetics and overall appeal to the target audience, the final book cover will be captivating and made of graphics and illustrations.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-12">
-                        <div class="simple-card">
-                            <img src="https://www.australianpublishers.com.au/assets/frontend/images/icons/ebook-publishing.svg" class="img-fluid lazyload d-block mx-auto ms-lg-0" alt="">
-                            <span class="h4">EBook Publishing</span>
-                            <p>We are your chance to take your book to the bestseller aisle by publishing it to your desired platform. You just have to share your manuscript, and we’ll do the rest. You name the platform, and we’ll take you there, meeting all your criteria.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-12">
-                        <div class="simple-card">
-                            <img src="https://www.australianpublishers.com.au/assets/frontend/images/icons/book-printing.svg" class="img-fluid lazyload d-block mx-auto ms-lg-0" alt="">
-                            <span class="h4">Book Printing</span>
-                            <p>Get exceptional printing services that are perfect for high-quality results. Whether you want a few copies or a large unit, we cater to all quantities. With tailored and cost-effective printing, your riveting story will come out on paper sharp.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-12">
-                        <div class="simple-card">
-                            <img src="https://www.australianpublishers.com.au/assets/frontend/images/icons/childrens-book-publishing.svg" class="img-fluid lazyload d-block mx-auto ms-lg-0" alt="">
-                                <span class="h4">Children's Book Publishing</span>
-                            <p>With top children's book publishers in Australia in our team, we claim to deliver the  best book launch services. Our team works tirelessly on ebook conversion and strategically releases your work on kid-friendly platforms for higher reach.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="row text-center">
-                    <div class="col-12">
-                        <a href="get-started.html" class="btn-live">Hire Our Publishers Today</a>
-                        <a href="contact-us.html" class="btn-call horizontal-shaking">
-                            <span class="icon-box">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"> <path d="M280 0C408.1 0 512 103.9 512 232c0 13.3-10.7 24-24 24s-24-10.7-24-24c0-101.6-82.4-184-184-184c-13.3 0-24-10.7-24-24s10.7-24 24-24zm8 192a32 32 0 1 1 0 64 32 32 0 1 1 0-64zm-32-72c0-13.3 10.7-24 24-24c75.1 0 136 60.9 136 136c0 13.3-10.7 24-24 24s-24-10.7-24-24c0-48.6-39.4-88-88-88c-13.3 0-24-10.7-24-24zM117.5 1.4c19.4-5.3 39.7 4.6 47.4 23.2l40 96c6.8 16.3 2.1 35.2-11.6 46.3L144 207.3c33.3 70.4 90.3 127.4 160.7 160.7L345 318.7c11.2-13.7 30-18.4 46.3-11.6l96 40c18.6 7.7 28.5 28 23.2 47.4l-24 88C481.8 499.9 466 512 448 512C200.6 512 0 311.4 0 64C0 46 12.1 30.2 29.5 25.4l88-24z" fill="currentColor"></path></svg>
-                            </span>
-                            <span><small>Give Us a Call</small> +61 111 222 333 </span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="award-banner text-lg-start text-center">
-            <img src="images/lines-layer.webp" class="img-fluid img-box" alt="">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12 col-lg-11 mx-auto">
-                        <div class="row gy-4 align-items-center">
-                            <div class="col-lg-6 col-12">
-                                <img src="https://www.australianpublishers.com.au/assets/frontend/images/bg/affordable-australian-book-publishers.webp" class="img-fluid lazyload d-block mx-auto" alt="">
-                            </div>
-                            <div class="col-lg-6 col-12">
-                                <h2 class="h2">We Publish Your Book & Share It with the World!</h2>
-                                <p>We are the best friends that authors need to push past every hurdle in their publishing journey.</p>
-                                <a href="get-started.html" class="btn-live mb-4">Launch My Book</a>
-                                <a href="contact-us.html" class="btn-chat horizontal-shaking mb-4">
-                                    <span class="icon-box">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="19.826" height="18" viewBox="0 0 19.826 18"> <g transform="translate(-448.122 -4801.5)" fill="currentColor"> <circle class="dot" cx="3.5" cy="3.5" r="3.5" transform="translate(460.949 4806.5)" fill="#47ce17"></circle> <path d="M460.979 4819.5h-1.286v-3.214a3.214 3.214 0 0 0-3.214-3.214h-3.857a3.214 3.214 0 0 0-3.214 3.214v3.214h-1.286v-3.214a4.5 4.5 0 0 1 4.5-4.5h3.857a4.5 4.5 0 0 1 4.5 4.5Zm-6.428-16.714a3.214 3.214 0 1 1-3.214 3.214 3.214 3.214 0 0 1 3.214-3.214m0-1.286a4.5 4.5 0 1 0 4.5 4.5 4.5 4.5 0 0 0-4.5-4.5"> </path> </g> </svg>
-                                    </span>
-                                    <span>Talk To Specialist</span>
-                                </a>
-                            </div>
-                        </div>
+                    <div class="col-lg-6">
+                        <img src="https://www.australianpublishers.com.au/assets/frontend/images/bg/path-of-ascension.webp" class="img-fluid lazyload d-block mx-auto" alt="" />
                     </div>
                 </div>
             </div>
         </section>
         <section class="process-area text-center">
             <div class="container">
-                <div class="row">
+                <div class="row mb-5">
                     <div class="col-lg-11 mx-auto text-center">
-                        <h2 class="h2">Turning Your Manuscript into a Masterpiece—The Australian Publishing Way</h2>
-                        <p>Just finished your manuscript? We know you don’t want to exhaust the long, tedious process offered by unreliable agencies. Get ready to publish your book without any hassle with our easy, simplified, and stress-free process. Have a look at what your journey will be like: </p>
+                        <h2 class="h2">Marketing Your Book Effortlessly Is Now Possible</h2>
+<p>Once you request our ‘Book Marketing Services’, your journey toward maximum exposure will become smooth. Our team ensures you have a seamless experience with our streamlined marketing process:</p>
+
                     </div>
                 </div>
-                <div class="row dash-line">
+                <div class="row dash-line mb-5">
                     <div class="col-12 col-lg-3 col-md-6">
-                        <div class="process-card">
-                            <div class="process-num">01</div>
-                            <div class="icon-box">
-                                <img src="https://www.australianpublishers.com.au/assets/frontend/images/icons/choose-package.webp" class="img-fluid lazyload d-block mx-auto" alt="" title="">
-                            </div>
-                            <span class="h5">Choose Package</span>
-                            <p>Select the package that suits your needs. Whether basic or premium, choose any and make payment to proceed with the process.</p>
+                        <div class="process-num">01</div>
+                        <div class="icon-box">
+                            <img src="https://www.australianpublishers.com.au/assets/frontend/images/icons/share.svg" class="img-fluid lazyload" alt="" />
                         </div>
+                        <span class="h5">Share</span>
+                        <p>Let us know everything from your expectations to the sites you want to conquer.</p>
                     </div>
                     <div class="col-12 col-lg-3 col-md-6">
-                        <div class="process-card">
-                            <div class="process-num">02</div>
-                            <div class="icon-box">
-                                <img src="https://www.australianpublishers.com.au/assets/frontend/images/icons/submit-manuscript.webp" class="img-fluid lazyload d-block mx-auto" alt="">
-                            </div>
-                            <span class="h5">Submit Manuscript</span>
-                            <p>Share your manuscript with our team, and we’ll get started with the strategy. Our team prepares your book for a seamless launch.</p>
+                        <div class="process-num">02</div>
+                        <div class="icon-box">
+                            <img src="https://www.australianpublishers.com.au/assets/frontend/images/icons/plan.svg" class="img-fluid lazyload" alt=""/>
                         </div>
+                        <span class="h5">Plan</span>
+                        <p>We craft a 100% tailored publishing strategy for a smooth book release.</p>
                     </div>
                     <div class="col-12 col-lg-3 col-md-6">
-                        <div class="process-card">
-                            <div class="process-num">03</div>
-                            <div class="icon-box">
-                                <img src="https://www.australianpublishers.com.au/assets/frontend/images/icons/approve-manuscript.webp" class="img-fluid lazyload d-block mx-auto" alt="">
-                            </div>
-                            <span class="h5">Approve Manuscript</span>
-                            <p>Before proceeding to the publishing phase, we share a finalised book with you. This is the phase where we make free revisions.</p>
+                        <div class="process-num">03</div>
+                        <div class="icon-box">
+                            <img src="https://www.australianpublishers.com.au/assets/frontend/images/icons/validate.svg" class="img-fluid lazyload" alt="" />
                         </div>
+                        <span class="h5">Validate</span>
+                        <p>Your approval is required so that we know that we’re on the same page.</p>
                     </div>
                     <div class="col-12 col-lg-3 col-md-6">
-                        <div class="process-card">
-                            <div class="process-num">04</div>
-                            <div class="icon-box">
-                                <img src="https://www.australianpublishers.com.au/assets/frontend/images/icons/book-go-live.webp" class="img-fluid lazyload d-block mx-auto" alt="">
-                            </div>
-                            <span class="h5">Book Go Live</span>
-                            <p>Once approved, your book will be published on all the desired platforms. Our team will still be in touch for any assistance.</p>
+                        <div class="process-num">04</div>
+                        <div class="icon-box">
+                            <img src="https://www.australianpublishers.com.au/assets/frontend/images/icons/publish.svg" class="img-fluid lazyload" alt=""/>
                         </div>
+                        <span class="h5">Publish</span>
+                        <p>Once we approve, we will release your comics on leading platforms worldwide.</p>
                     </div>
                 </div>
-            </div>
-        </section>
-        <section class="books-slides">
-            <div class="container">
-                <div class="row mb-3">
-                    <div class="col-lg-11 mx-auto text-center">
-                        <h2 class="h2">Australian Book Publishers Proudly Transforming Manuscripts into Bestsellers</h2>
-                        <p>Just by looking at our portfolio, you’ll be impressed to the core. We have worked on infinite genres and helped them get into the bestseller aisle, even in the cut-throat competition. </p>
-                    </div>
-                </div>
-                <div class="row gy-4">
-                    <div class="col-lg-6">
-                        <div class="box-area">
-                            <div class="d-flex justify-content-between mb-3">
-                                <a href="about-us.html" class="btn-live">Top Children’s Read</a>
-                            </div>
-                            <div class="swiper book-slider">
-                                <div class="arrows">
-                                    <div class="swiper-button-prev"></div>
-                                    <div class="swiper-button-next"></div>
-                                </div>
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
-                                        <img src="https://www.australianpublishers.com.au/assets/frontend/images/portfolio/recent-hot-sellers/beyond-happy-and-sad.webp" class="img-fluid lazyload" alt="">
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="https://www.australianpublishers.com.au/assets/frontend/images/portfolio/recent-hot-sellers/dubai-catventure.webp" class="img-fluid lazyload" alt="">
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="https://www.australianpublishers.com.au/assets/frontend/images/portfolio/recent-hot-sellers/mummy-wont-open-her-eyes.webp" class="img-fluid lazyload" alt="">
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="https://www.australianpublishers.com.au/assets/frontend/images/portfolio/recent-hot-sellers/what-is-tai.webp" class="img-fluid lazyload" alt="">
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="https://www.australianpublishers.com.au/assets/frontend/images/portfolio/recent-hot-sellers/shaimas-wisdoms.webp" class="img-fluid lazyload" alt="">
-                                        </div>
-                                    <div class="swiper-slide">
-                                        <img src="https://www.australianpublishers.com.au/assets/frontend/images/portfolio/recent-hot-sellers/living-indigenous.webp" class="img-fluid lazyload" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="box-area">
-                            <div class="d-flex justify-content-between mb-3">
-                                <a href="become-an-author.html" class="btn-live">Our Bestsellers</a>
-                            </div>
-                            <div class="swiper book-slider">
-                                <div class="arrows">
-                                    <div class="swiper-button-prev"></div>
-                                    <div class="swiper-button-next"></div>
-                                </div>
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
-                                        <img src="https://www.australianpublishers.com.au/assets/frontend/images/portfolio/recent-hot-sellers/survival.webp" class="img-fluid lazyload" alt="">
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="https://www.australianpublishers.com.au/assets/frontend/images/portfolio/recent-hot-sellers/swan-club.webp" class="img-fluid lazyload" alt="">
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="https://www.australianpublishers.com.au/assets/frontend/images/portfolio/recent-hot-sellers/the-girl-who-was.webp" class="img-fluid lazyload" alt="">
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="https://www.australianpublishers.com.au/assets/frontend/images/portfolio/recent-hot-sellers/the-last-good-bye.webp" class="img-fluid lazyload" alt="">
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="https://www.australianpublishers.com.au/assets/frontend/images/portfolio/recent-hot-sellers/the-spiritual-awakening.webp" class="img-fluid lazyload" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="cta-banner text-lg-start text-center">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-12 col-lg-6">
-                        <h2 class="h2">Don’t Know How to Self-Publish a Book? Our Book Publishing Agents Will Do All The Work!</h2>
-                        <p>Publishing a book is a tiring process—it's definitely more than just uploading your manuscript. But you can have peace of mind only with our expert book publishers, handpicked from Sydney, Melbourne, Brisbane, Perth, Adelaide, and beyond. We will take care of all the technicalities and publish your book according to your requirements. Sharing your manuscript is all we ask; the rest is our responsibility.</p>
-                        <a href="get-started.html" class="btn-live">Publish My Book To Amazon</a>
+                <div class="row text-center">
+                    <div class="col-12">
+                        <h2 class="h5 mb-4">Let’s Make Your Comics Available Everywhere</h2>
+                        <a href="get-started.html" class="btn-live">Let’s Get Started</a>
                         <a href="contact-us.html" class="btn-call horizontal-shaking">
                             <span class="icon-box">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"> <path d="M280 0C408.1 0 512 103.9 512 232c0 13.3-10.7 24-24 24s-24-10.7-24-24c0-101.6-82.4-184-184-184c-13.3 0-24-10.7-24-24s10.7-24 24-24zm8 192a32 32 0 1 1 0 64 32 32 0 1 1 0-64zm-32-72c0-13.3 10.7-24 24-24c75.1 0 136 60.9 136 136c0 13.3-10.7 24-24 24s-24-10.7-24-24c0-48.6-39.4-88-88-88c-13.3 0-24-10.7-24-24zM117.5 1.4c19.4-5.3 39.7 4.6 47.4 23.2l40 96c6.8 16.3 2.1 35.2-11.6 46.3L144 207.3c33.3 70.4 90.3 127.4 160.7 160.7L345 318.7c11.2-13.7 30-18.4 46.3-11.6l96 40c18.6 7.7 28.5 28 23.2 47.4l-24 88C481.8 499.9 466 512 448 512C200.6 512 0 311.4 0 64C0 46 12.1 30.2 29.5 25.4l88-24z" fill="currentColor"></path> </svg>
-                            </span>
-                            <span><small>Get Expert Help</small> +61 111 222 333 </span>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"> <path d="M280 0C408.1 0 512 103.9 512 232c0 13.3-10.7 24-24 24s-24-10.7-24-24c0-101.6-82.4-184-184-184c-13.3 0-24-10.7-24-24s10.7-24 24-24zm8 192a32 32 0 1 1 0 64 32 32 0 1 1 0-64zm-32-72c0-13.3 10.7-24 24-24c75.1 0 136 60.9 136 136c0 13.3-10.7 24-24 24s-24-10.7-24-24c0-48.6-39.4-88-88-88c-13.3 0-24-10.7-24-24zM117.5 1.4c19.4-5.3 39.7 4.6 47.4 23.2l40 96c6.8 16.3 2.1 35.2-11.6 46.3L144 207.3c33.3 70.4 90.3 127.4 160.7 160.7L345 318.7c11.2-13.7 30-18.4 46.3-11.6l96 40c18.6 7.7 28.5 28 23.2 47.4l-24 88C481.8 499.9 466 512 448 512C200.6 512 0 311.4 0 64C0 46 12.1 30.2 29.5 25.4l88-24z" fill="currentColor" /> </svg>
+                            </span><span><small>Give Us A Call</small> +61 290 991 615 </span>
                         </a>
                     </div>
-                    <div class="col-12 col-lg-6 text-center">
-                        <img src="https://www.australianpublishers.com.au/assets/frontend/images/bg/the-spiritual-awakening.webp" class="img-fluid lazyload" alt="">
+                </div>
+            </div>
+        </section>
+        <section class="portfolio text-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-lg-8 mx-auto">
+                        <h2 class="h2">Books Successfully Promoted by Our Team</h2>
+                        <p>Take a look at some of the bestselling books that gained wide visibility and success with our marketing expertise:</p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid p-0">
+                <div class="swiper banner-slider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="https://kangaroopublishers.com/wp-content/uploads/2025/12/Copy-of-Poppin-the-Butterfly.png" class="img-fluid lazyload" alt=""/>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://kangaroopublishers.com/wp-content/uploads/2025/12/Front.png" class="img-fluid lazyload" alt=""/>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://kangaroopublishers.com/wp-content/uploads/2025/12/Maria-Blois-front-1024x1536.png" class="img-fluid lazyload" alt=""/>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://kangaroopublishers.com/wp-content/uploads/2025/12/Mr.-Ivan-front-cover.png" class="img-fluid lazyload" alt=""/>
+                            </div>
+                        <div class="swiper-slide">
+                            <img src="https://kangaroopublishers.com/wp-content/uploads/2025/12/Maria-Blois-front-1024x1536.png" class="img-fluid lazyload" alt=""/>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://kangaroopublishers.com/wp-content/uploads/2025/12/Front.png" class="img-fluid lazyload" alt=""/>
+                            </div>
+                        <div class="swiper-slide">
+                            <img src="https://kangaroopublishers.com/wp-content/uploads/2025/12/Copy-of-Poppin-the-Butterfly.png" class="img-fluid lazyload" alt=""/>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1964,168 +2057,46 @@
                 </div>
             </div>
         </section>
-        <section class="faq-sec">
-            <div class="container">
-                <div class="row text-center">
-                    <div class="col-12 col-lg-11 mx-auto">
-                        <h2 class="h2">Everything You Need To Know About Manuscript Publishing</h2>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-12 col-lg-11 mx-auto">
-                        <div class="row">
-                            <div class="col-12 col-lg-6">
-                                <div class="accordion accordion-flush" id="faqs-0">
-                                    <div class="accordion-item">
-                                        <h3 class="accordion-header">
-                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-0-0" aria-expanded="false" aria-controls="collapse-0-0"> How to publish a book with your assistance in Australia? </button>
-                                        </h3>
-                                        <div id="collapse-0-0" class="accordion-collapse collapse" data-bs-parent="#faqs-0">
-                                            <div class="accordion-body">
-                                                <p>Simply hire our experts by getting in touch and sharing your requirements. Our team requires your book title, manuscript, and the  platforms you want your book to be on, and we’ll handle the rest.
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="accordion-item">
-                                        <h3 class="accordion-header">
-                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-0-1" aria-expanded="false" aria-controls="collapse-0-1"> How long does it take to publish my book on Amazon’s Kindle? </button>
-                                        </h3>
-                                        <div id="collapse-0-1" class="accordion-collapse collapse" data-bs-parent="#faqs-0">
-                                            <div class="accordion-body">
-                                                <p>While most book publishing takes over a month, our book publishing efforts will release your book within 7 to 15 days only. You are advised to get an exact timeframe for your project, as the given turnaround time may exceed depending on the deadline, book genre, and requirements. </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="accordion-item">
-                                        <h3 class="accordion-header">
-                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-0-2" aria-expanded="false" aria-controls="collapse-0-2"> How can you publish a book urgently on Amazon in Melbourne? </button>
-                                        </h3>
-                                        <div id="collapse-0-2" class="accordion-collapse collapse" data-bs-parent="#faqs-0">
-                                            <div class="accordion-body">
-                                                <p>If you want to urgently publish your book, we are here to help. Our book publishers are trained to provide instant services and take your book to the desired platform. While a typical timeframe takes a week, urgent publishing will only take a few days. </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="accordion-item">
-                                        <h3 class="accordion-header">
-                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-0-3" aria-expanded="false" aria-controls="collapse-0-3"> How do I get my book published in a single attempt? </button>
-                                        </h3>
-                                        <div id="collapse-0-3" class="accordion-collapse collapse" data-bs-parent="#faqs-0">
-                                            <div class="accordion-body">
-                                                <p>That’s quite challenging without our help. Don’t waste your time on self-publishing, and hire us today. We are dedicated to assisting you in your publishing journey and strategically do everything from book cover, marketing, editing, and proofreading. With such effort, we ensure you never face rejection.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12 col-lg-6">
-                                <div class="accordion accordion-flush" id="faqs-1">
-                                    <div class="accordion-item">
-                                        <h3 class="accordion-header">
-                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-1-4" aria-expanded="false" aria-controls="collapse-1-4"> How do you sell a book on Amazon without sharing profits? </button>
-                                        </h3>
-                                        <div id="collapse-1-4" class="accordion-collapse collapse" data-bs-parent="#faqs-1">
-                                            <div class="accordion-body">
-                                                <p>If you don’t want to share your profits, our platform is perfect for  you! We are most probably the only book publishers in Australia that  completely refuse the idea of royalties. All we charge is an affordable fee in return for our excellent services. There are no extra charges and no surprise fees.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="accordion-item">
-                                        <h3 class="accordion-header">
-                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-1-5" aria-expanded="false" aria-controls="collapse-1-5"> Who can publish my book? Are your publishers experienced? </button>
-                                        </h3>
-                                        <div id="collapse-1-5" class="accordion-collapse collapse" data-bs-parent="#faqs-1">
-                                            <div class="accordion-body">
-                                                <p>Our book publishers are the best in town, and that’s evident in their  exceptional work. Every publisher has a minimum of five years of  experience. With a proven record of fast publishing across various  platforms, we’ll take care of your book launch, regardless of the genre and storyline. </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="accordion-item">
-                                        <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-1-6" aria-expanded="false" aria-controls="collapse-1-6"> How much does it cost to publish a book in Sydney, Australia? </button></h3>
-                                        <div id="collapse-1-6" class="accordion-collapse collapse" data-bs-parent="#faqs-1">
-                                            <div class="accordion-body">
-                                                <p>Book publishing costs are skyrocketing in Australia. However, we are  introducing budget-friendly prices starting as low as AU$ 899.  Please note that these prices only cover basic publishing. We encourage you to get an exact quote from our team to have complete  transparency over rates. </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="accordion-item">
-                                        <h3 class="accordion-header">
-                                            <button class="accordion-button collapsed"  type="button" data-bs-toggle="collapse" data-bs-target="#collapse-1-7"  aria-expanded="false" aria-controls="collapse-1-7"> How can I hire your  professional book publisher in Australia? </button>
-                                            </h3>
-                                        <div id="collapse-1-7" class="accordion-collapse collapse" data-bs-parent="#faqs-1">
-                                            <div class="accordion-body">
-                                                <p>Hiring our expert writers is super easy. All you have to do is get in touch with our team via call or contact form. Our team will respond within 24 hours with suitable packages. We’ll assign you a publisher based on your requirements and book genre. Later, make payment and enjoy publishing!</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
         <section class="content-area text-lg-start text-center">
-            <div class="container">
-                <div class="row gy-4">
-                    <div class="col-lg-11 mb-3 mx-auto text-center">
-                        <h2 class="h2">Your Story, Our Expertise—Let’s Publish Your Book Together</h2>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="text-box">
-                            <h3 class="h5">Famous Book Publishers with Expertise in Every Genre</h3>
-                            <p>If you’re looking for ‘talented book publishers near me,’ you’re at the right place! We  are a one-stop destination for publishing, as our team has renowned book publishers with  expertise in 50+ genres. We have publishers with command over every book genre, from  textbooks, art books, comics, poetry, romance, and graphic novels to kids' books. No matter what type of story you've written, it won’t collect dust on your shelf. Our  publishers will distribute your book, regardless of the genre.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="text-box">
-                            <h3 class="h5">Rejection-Free Book Release in Australia and Beyond</h3>
-                            <p>Have you tried self-publishing but only got a rejection? That’s what most authors face. But once you partner with our team, we take care of you, and you won’t face such issues.  Our team ensures your book is professionally edited, converted, designed, and  strategically marketed for a successful release. We promise wide distribution worldwide  since we have solid partnerships across 120+ platforms. No middlemen, no delays—connect  directly with our publishers and get your book launched in one shot.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="text-box">
-                            <h3 class="h5">Zero Royalty Book Publishing Ensures No Profit Sharing</h3>
-                            <p>You no longer have to share your book earnings as we support royalty-free services.  Unlike traditional publishing houses, we don’t take cuts from your book sales. No matter  how much you earn, it all goes into your pocket. Every dollar you earn will stay with  you since we only charge a one-time fee. That, too, is very reasonable. No surprises are  on the way, nor are there hidden charges when you get us on board. Enjoy our transparent  process and pricing, and keep your revenues to yourself.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="text-box">
-                            <h3 class="h5">Australia’s #1 Book Publishing House for Author Support</h3>
-                            <p>Every author wants to see their book on the bestseller shelf. However, more than half of  those authors don't even get the opportunity to publish their work. With our assistance,  your book won't collect dust on your shelf but will be available across the globe. We  are your chance to get started with an incredible authorship. We work as publishing  agents for authors, ensuring they get their books to top-tier platforms. Whether you’re  a beginner or a professional author, our services have got you covered!</p>
-                        </div>
-                    </div>
+    <div class="container">
+        <div class="row gy-4">
+            <div class="col-lg-11 mb-3 mx-auto text-center">
+                <h2 class="h2">Australia’s Top-Rated Book Marketing Experts Get Your Book Recognition Worldwide</h2>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="text-box">
+                    <h3 class="h5">Marketing with Us Is Cost-Effective</h3>
+                    <p>Effective book marketing can seem expensive, but with our tailored marketing services, your book will reach readers across multiple platforms without breaking the budget. We provide exclusive deals to help authors promote their books affordably while maximizing impact.</p>
                 </div>
             </div>
-        </section>
-        <section class="content-form text-center text-lg-start">
-            <div class="container">
-                <div class="row align-items-center gy-4">
-                    <div class="col-12 col-lg-6">
-                        <h2 class="h2">Making Your Book Shine in Australia with Our Professional Book Publisher’s Touch
-                        </h2>
-                        <p>Have you written a great book but are unsure about the publishing process? Our  self-publishing agents are here to help! Collaborate with our team, and we’ll handle the  tough parts while you focus on your manuscript. We specialize in strategic publishing to ensure you stand out and become a legendary author.</p>
-                        <div class="btn-box">
-                            <a href="get-started.html" class="btn-live">Publish Your Book</a>
-                            <a href="contact-us.html" class="btn-call horizontal-shaking">
-                                <span class="icon-box">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"> <path d="M280 0C408.1 0 512 103.9 512 232c0 13.3-10.7 24-24 24s-24-10.7-24-24c0-101.6-82.4-184-184-184c-13.3 0-24-10.7-24-24s10.7-24 24-24zm8 192a32 32 0 1 1 0 64 32 32 0 1 1 0-64zm-32-72c0-13.3 10.7-24 24-24c75.1 0 136 60.9 136 136c0 13.3-10.7 24-24 24s-24-10.7-24-24c0-48.6-39.4-88-88-88c-13.3 0-24-10.7-24-24zM117.5 1.4c19.4-5.3 39.7 4.6 47.4 23.2l40 96c6.8 16.3 2.1 35.2-11.6 46.3L144 207.3c33.3 70.4 90.3 127.4 160.7 160.7L345 318.7c11.2-13.7 30-18.4 46.3-11.6l96 40c18.6 7.7 28.5 28 23.2 47.4l-24 88C481.8 499.9 466 512 448 512C200.6 512 0 311.4 0 64C0 46 12.1 30.2 29.5 25.4l88-24z" fill="currentColor"></path> </svg>
-                                </span>
-                                <span>
-                                    <small>Let’s Talk First</small> +61 111 222 333 
-                                </span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-12 col-lg-6">
-                        <img src="https://www.australianpublishers.com.au/assets/frontend/images/bg/your-book-shine-in-australia.webp" class="img-fluid lazyload d-block mx-auto" alt="">
-                    </div>
+
+            <div class="col-lg-6">
+                <div class="text-box">
+                    <h3 class="h5">Promote Your Book Successfully on the First Attempt</h3>
+                    <p>Struggling to get your book noticed? With our expert marketing team, your book will be positioned for maximum exposure. We handle all technical aspects of online promotion, ensuring your campaigns run smoothly and your book reaches the right audience from the start.</p>
                 </div>
             </div>
-        </section>
+
+            <div class="col-lg-6">
+                <div class="text-box">
+                    <h3 class="h5">Your Book Marketing Goals Achieved Here</h3>
+                    <p>Achieve your author goals with our comprehensive marketing services. We help your book gain visibility on top platforms, connecting with readers worldwide. From building awareness to driving sales, our strategies ensure your book reaches its full potential.</p>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="text-box">
+                    <h3 class="h5">We Offer 100% Transparent Marketing Services</h3>
+                    <p>Unlike many agencies that charge hidden fees, we provide fully transparent marketing services. No hidden costs—just a clear, one-time fee to launch your campaigns. Authors across Australia, from Sydney to Perth, can enjoy our ethical and results-driven marketing approach.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
     </main>
-    <footer class="footer text-center text-md-start">
+  <footer class="footer text-center text-md-start">
         <div class="container">
             <div class="row">
                 <div class="col-12 col-md-4">
@@ -2225,7 +2196,7 @@
             </div>
         </div>
     </div>
-    <script defer="" src="js/bootstrap.js" type="c72f6a2fff90882ff2180662-text/javascript"></script>
+  <script defer="" src="js/bootstrap.js" type="c72f6a2fff90882ff2180662-text/javascript"></script>
     <script src="https://www.australianpublishers.com.au/assets/frontend/js/brands-slider.js" defer></script>
     <script src="https://www.australianpublishers.com.au/assets/frontend/js/book-slider.js" defer></script>
     <script src="https://www.australianpublishers.com.au/assets/frontend/js/banner-slider.js" defer></script>
