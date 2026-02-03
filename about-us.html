@@ -1,0 +1,1831 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Document</title>
+    <meta name="description" content="">
+
+    <style>
+        .h1,
+        .h4,
+        h1 {
+            color: var(--bs-heading-color);
+            font-weight: 500;
+            line-height: 1.2;
+            margin-bottom: .5rem;
+            margin-top: 0
+        }
+
+        .h1,
+        .h4,
+        h1 {
+            color: #0f232c;
+            display: inline-block
+        }
+
+        .h1,
+        h1 {
+            font-family: MultiDisplay-Medium, sans-serif;
+            margin-bottom: 20px
+        }
+
+        @media (min-width:1200px)and (max-width:1399px) {
+
+            .h1,
+            h1 {
+                font-size: 35px !important
+            }
+
+            .h4 {
+                font-size: 22px !important
+            }
+        }
+
+        @media (max-width:575.98px) {
+            section {
+                padding: 50px 0
+            }
+
+            .h1,
+            h1 {
+                font-size: 32px !important
+            }
+
+            .btn-order {
+                margin-top: 16px
+            }
+        }
+
+        section.award-banner .img-box {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            z-index: -1
+        }
+
+        section.award-banner .img-box img {
+            width: 100%
+        }
+
+        :root {
+            --swiper-theme-color: #007aff
+        }
+
+        .swiper {
+            display: block;
+            list-style: none;
+            margin-left: auto;
+            margin-right: auto;
+            overflow: hidden;
+            padding: 0
+        }
+
+        .swiper,
+        .swiper-wrapper {
+            position: relative;
+            z-index: 1
+        }
+
+        .swiper-wrapper {
+            box-sizing: content-box;
+            display: flex;
+            height: 100%;
+            transform: translateZ(0);
+            width: 100%
+        }
+
+        .swiper-slide {
+            display: block;
+            flex-shrink: 0;
+            height: 100%;
+            position: relative;
+            width: 100%
+        }
+
+        :root {
+            --swiper-navigation-size: 44px
+        }
+
+        :root {
+            --bs-blue: #0d6efd;
+            --bs-indigo: #6610f2;
+            --bs-purple: #6f42c1;
+            --bs-pink: #d63384;
+            --bs-red: #dc3545;
+            --bs-orange: #fd7e14;
+            --bs-yellow: #ffc107;
+            --bs-green: #198754;
+            --bs-teal: #20c997;
+            --bs-cyan: #0dcaf0;
+            --bs-black: #000;
+            --bs-white: #fff;
+            --bs-gray: #6c757d;
+            --bs-gray-dark: #343a40;
+            --bs-gray-100: #f8f9fa;
+            --bs-gray-200: #e9ecef;
+            --bs-gray-300: #dee2e6;
+            --bs-gray-400: #ced4da;
+            --bs-gray-500: #adb5bd;
+            --bs-gray-600: #6c757d;
+            --bs-gray-700: #495057;
+            --bs-gray-800: #343a40;
+            --bs-gray-900: #212529;
+            --bs-primary: #0d6efd;
+            --bs-secondary: #6c757d;
+            --bs-success: #198754;
+            --bs-info: #0dcaf0;
+            --bs-warning: #ffc107;
+            --bs-danger: #dc3545;
+            --bs-light: #f8f9fa;
+            --bs-dark: #212529;
+            --bs-primary-rgb: 13, 110, 253;
+            --bs-secondary-rgb: 108, 117, 125;
+            --bs-success-rgb: 25, 135, 84;
+            --bs-info-rgb: 13, 202, 240;
+            --bs-warning-rgb: 255, 193, 7;
+            --bs-danger-rgb: 220, 53, 69;
+            --bs-light-rgb: 248, 249, 250;
+            --bs-dark-rgb: 33, 37, 41;
+            --bs-primary-text-emphasis: #052c65;
+            --bs-secondary-text-emphasis: #2b2f32;
+            --bs-success-text-emphasis: #0a3622;
+            --bs-info-text-emphasis: #055160;
+            --bs-warning-text-emphasis: #664d03;
+            --bs-danger-text-emphasis: #58151c;
+            --bs-light-text-emphasis: #495057;
+            --bs-dark-text-emphasis: #495057;
+            --bs-primary-bg-subtle: #cfe2ff;
+            --bs-secondary-bg-subtle: #e2e3e5;
+            --bs-success-bg-subtle: #d1e7dd;
+            --bs-info-bg-subtle: #cff4fc;
+            --bs-warning-bg-subtle: #fff3cd;
+            --bs-danger-bg-subtle: #f8d7da;
+            --bs-light-bg-subtle: #fcfcfd;
+            --bs-dark-bg-subtle: #ced4da;
+            --bs-primary-border-subtle: #9ec5fe;
+            --bs-secondary-border-subtle: #c4c8cb;
+            --bs-success-border-subtle: #a3cfbb;
+            --bs-info-border-subtle: #9eeaf9;
+            --bs-warning-border-subtle: #ffe69c;
+            --bs-danger-border-subtle: #f1aeb5;
+            --bs-light-border-subtle: #e9ecef;
+            --bs-dark-border-subtle: #adb5bd;
+            --bs-white-rgb: 255, 255, 255;
+            --bs-black-rgb: 0, 0, 0;
+            --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+            --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+            --bs-gradient: linear-gradient(180deg, hsla(0, 0%, 100%, .15), hsla(0, 0%, 100%, 0));
+            --bs-body-font-family: var(--bs-font-sans-serif);
+            --bs-body-font-size: 1rem;
+            --bs-body-font-weight: 400;
+            --bs-body-line-height: 1.5;
+            --bs-body-color: #212529;
+            --bs-body-color-rgb: 33, 37, 41;
+            --bs-body-bg: #fff;
+            --bs-body-bg-rgb: 255, 255, 255;
+            --bs-emphasis-color: #000;
+            --bs-emphasis-color-rgb: 0, 0, 0;
+            --bs-secondary-color: rgba(33, 37, 41, .75);
+            --bs-secondary-color-rgb: 33, 37, 41;
+            --bs-secondary-bg: #e9ecef;
+            --bs-secondary-bg-rgb: 233, 236, 239;
+            --bs-tertiary-color: rgba(33, 37, 41, .5);
+            --bs-tertiary-color-rgb: 33, 37, 41;
+            --bs-tertiary-bg: #f8f9fa;
+            --bs-tertiary-bg-rgb: 248, 249, 250;
+            --bs-heading-color: inherit;
+            --bs-link-color: #0d6efd;
+            --bs-link-color-rgb: 13, 110, 253;
+            --bs-link-decoration: underline;
+            --bs-link-hover-color: #0a58ca;
+            --bs-link-hover-color-rgb: 10, 88, 202;
+            --bs-code-color: #d63384;
+            --bs-highlight-color: #212529;
+            --bs-highlight-bg: #fff3cd;
+            --bs-border-width: 1px;
+            --bs-border-style: solid;
+            --bs-border-color: #dee2e6;
+            --bs-border-color-translucent: rgba(0, 0, 0, .175);
+            --bs-border-radius: 0.375rem;
+            --bs-border-radius-sm: 0.25rem;
+            --bs-border-radius-lg: 0.5rem;
+            --bs-border-radius-xl: 1rem;
+            --bs-border-radius-xxl: 2rem;
+            --bs-border-radius-2xl: var(--bs-border-radius-xxl);
+            --bs-border-radius-pill: 50rem;
+            --bs-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, .15);
+            --bs-box-shadow-sm: 0 0.125rem 0.25rem rgba(0, 0, 0, .075);
+            --bs-box-shadow-lg: 0 1rem 3rem rgba(0, 0, 0, .175);
+            --bs-box-shadow-inset: inset 0 1px 2px rgba(0, 0, 0, .075);
+            --bs-focus-ring-width: 0.25rem;
+            --bs-focus-ring-opacity: 0.25;
+            --bs-focus-ring-color: rgba(13, 110, 253, .25);
+            --bs-form-valid-color: #198754;
+            --bs-form-valid-border-color: #198754;
+            --bs-form-invalid-color: #dc3545;
+            --bs-form-invalid-border-color: #dc3545
+        }
+
+        *,
+        :after,
+        :before {
+            box-sizing: border-box
+        }
+
+        @media (prefers-reduced-motion:no-preference) {
+            :root {
+                scroll-behavior: smooth
+            }
+        }
+
+        body {
+            -webkit-text-size-adjust: 100%;
+            background-color: var(--bs-body-bg);
+            color: var(--bs-body-color);
+            font-family: var(--bs-body-font-family);
+            font-size: var(--bs-body-font-size);
+            font-weight: var(--bs-body-font-weight);
+            line-height: var(--bs-body-line-height);
+            margin: 0;
+            text-align: var(--bs-body-text-align)
+        }
+
+        .h1,
+        .h2,
+        .h4,
+        h1,
+        h2 {
+            color: var(--bs-heading-color);
+            font-weight: 500;
+            line-height: 1.2;
+            margin-bottom: .5rem;
+            margin-top: 0
+        }
+
+        .h1,
+        h1 {
+            font-size: calc(1.375rem + 1.5vw)
+        }
+
+        @media (min-width:1200px) {
+
+            .h1,
+            h1 {
+                font-size: 2.5rem
+            }
+        }
+
+        .h2,
+        h2 {
+            font-size: calc(1.325rem + .9vw)
+        }
+
+        @media (min-width:1200px) {
+
+            .h2,
+            h2 {
+                font-size: 2rem
+            }
+        }
+
+        .h4 {
+            font-size: calc(1.275rem + .3vw)
+        }
+
+        @media (min-width:1200px) {
+            .h4 {
+                font-size: 1.5rem
+            }
+        }
+
+        p {
+            margin-top: 0
+        }
+
+        ul {
+            margin-bottom: 1rem;
+            margin-top: 0;
+            padding-left: 2rem
+        }
+
+        a {
+            color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));
+            text-decoration: underline
+        }
+
+        img,
+        svg {
+            vertical-align: middle
+        }
+
+        button {
+            border-radius: 0
+        }
+
+        button {
+            font-family: inherit;
+            font-size: inherit;
+            line-height: inherit;
+            margin: 0;
+            text-transform: none
+        }
+
+        [type=button],
+        button {
+            -webkit-appearance: button
+        }
+
+        ::-moz-focus-inner {
+            border-style: none;
+            padding: 0
+        }
+
+        ::-webkit-datetime-edit-day-field,
+        ::-webkit-datetime-edit-fields-wrapper,
+        ::-webkit-datetime-edit-hour-field,
+        ::-webkit-datetime-edit-minute,
+        ::-webkit-datetime-edit-month-field,
+        ::-webkit-datetime-edit-text,
+        ::-webkit-datetime-edit-year-field {
+            padding: 0
+        }
+
+        ::-webkit-inner-spin-button {
+            height: auto
+        }
+
+        ::-webkit-search-decoration {
+            -webkit-appearance: none
+        }
+
+        ::-webkit-color-swatch-wrapper {
+            padding: 0
+        }
+
+        ::file-selector-button {
+            -webkit-appearance: button;
+            font: inherit
+        }
+
+        .img-fluid {
+            height: auto;
+            max-width: 100%
+        }
+
+        .container,
+        .container-fluid {
+            --bs-gutter-x: 1.5rem;
+            --bs-gutter-y: 0;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: calc(var(--bs-gutter-x)*.5);
+            padding-right: calc(var(--bs-gutter-x)*.5);
+            width: 100%
+        }
+
+        @media (min-width:576px) {
+            .container {
+                max-width: 540px
+            }
+        }
+
+        @media (min-width:768px) {
+            .container {
+                max-width: 720px
+            }
+        }
+
+        @media (min-width:992px) {
+            .container {
+                max-width: 960px
+            }
+        }
+
+        @media (min-width:1200px) {
+            .container {
+                max-width: 1140px
+            }
+        }
+
+        @media (min-width:1400px) {
+            .container {
+                max-width: 1320px
+            }
+        }
+
+        .row {
+            --bs-gutter-x: 1.5rem;
+            --bs-gutter-y: 0;
+            display: flex;
+            flex-wrap: wrap;
+            margin-left: calc(var(--bs-gutter-x)*-.5);
+            margin-right: calc(var(--bs-gutter-x)*-.5);
+            margin-top: calc(var(--bs-gutter-y)*-1)
+        }
+
+        .row>* {
+            flex-shrink: 0;
+            margin-top: var(--bs-gutter-y);
+            max-width: 100%;
+            padding-left: calc(var(--bs-gutter-x)*.5);
+            padding-right: calc(var(--bs-gutter-x)*.5);
+            width: 100%
+        }
+
+        .col-12 {
+            flex: 0 0 auto;
+            width: 100%
+        }
+
+        .gy-4 {
+            --bs-gutter-y: 1.5rem
+        }
+
+        @media (min-width:768px) {
+            .col-md-6 {
+                flex: 0 0 auto;
+                width: 50%
+            }
+        }
+
+        @media (min-width:992px) {
+            .col-lg-4 {
+                flex: 0 0 auto;
+                width: 33.33333333%
+            }
+
+            .col-lg-6 {
+                flex: 0 0 auto;
+                width: 50%
+            }
+        }
+
+        .collapse:not(.show) {
+            display: none
+        }
+
+        .dropdown {
+            position: relative
+        }
+
+        .dropdown-toggle {
+            white-space: nowrap
+        }
+
+        .dropdown-toggle:after {
+            border-bottom: 0;
+            border-left: .3em solid transparent;
+            border-right: .3em solid transparent;
+            border-top: .3em solid;
+            content: "";
+            display: inline-block;
+            margin-left: .255em;
+            vertical-align: .255em
+        }
+
+        .dropdown-menu {
+            --bs-dropdown-zindex: 1000;
+            --bs-dropdown-min-width: 10rem;
+            --bs-dropdown-padding-x: 0;
+            --bs-dropdown-padding-y: 0.5rem;
+            --bs-dropdown-font-size: 1rem;
+            --bs-dropdown-color: var(--bs-body-color);
+            --bs-dropdown-bg: var(--bs-body-bg);
+            --bs-dropdown-border-color: var(--bs-border-color-translucent);
+            --bs-dropdown-border-radius: var(--bs-border-radius);
+            --bs-dropdown-border-width: var(--bs-border-width);
+            --bs-dropdown-link-color: var(--bs-body-color);
+            --bs-dropdown-link-hover-color: var(--bs-body-color);
+            --bs-dropdown-link-hover-bg: var(--bs-tertiary-bg);
+            --bs-dropdown-link-active-color: #fff;
+            --bs-dropdown-link-active-bg: #0d6efd;
+            --bs-dropdown-link-disabled-color: var(--bs-tertiary-color);
+            --bs-dropdown-item-padding-x: 1rem;
+            --bs-dropdown-item-padding-y: 0.25rem;
+            background-clip: padding-box;
+            background-color: var(--bs-dropdown-bg);
+            border: var(--bs-dropdown-border-width) solid var(--bs-dropdown-border-color);
+            border-radius: var(--bs-dropdown-border-radius);
+            color: var(--bs-dropdown-color);
+            display: none;
+            font-size: var(--bs-dropdown-font-size);
+            list-style: none;
+            margin: 0;
+            min-width: var(--bs-dropdown-min-width);
+            padding: var(--bs-dropdown-padding-y) var(--bs-dropdown-padding-x);
+            position: absolute;
+            text-align: left;
+            z-index: var(--bs-dropdown-zindex)
+        }
+
+        .dropdown-item {
+            background-color: transparent;
+            border: 0;
+            border-radius: var(--bs-dropdown-item-border-radius, 0);
+            clear: both;
+            color: var(--bs-dropdown-link-color);
+            display: block;
+            font-weight: 400;
+            padding: var(--bs-dropdown-item-padding-y) var(--bs-dropdown-item-padding-x);
+            text-align: inherit;
+            text-decoration: none;
+            white-space: nowrap;
+            width: 100%
+        }
+
+        .nav-link {
+            background: 0 0;
+            border: 0;
+            color: var(--bs-nav-link-color);
+            display: block;
+            font-size: var(--bs-nav-link-font-size);
+            font-weight: var(--bs-nav-link-font-weight);
+            padding: var(--bs-nav-link-padding-y) var(--bs-nav-link-padding-x);
+            text-decoration: none
+        }
+
+        .navbar {
+            --bs-navbar-padding-x: 0;
+            --bs-navbar-padding-y: 0.5rem;
+            --bs-navbar-color: rgba(var(--bs-emphasis-color-rgb), 0.65);
+            --bs-navbar-hover-color: rgba(var(--bs-emphasis-color-rgb), 0.8);
+            --bs-navbar-disabled-color: rgba(var(--bs-emphasis-color-rgb), 0.3);
+            --bs-navbar-active-color: rgba(var(--bs-emphasis-color-rgb), 1);
+            --bs-navbar-brand-padding-y: 0.3125rem;
+            --bs-navbar-brand-margin-end: 1rem;
+            --bs-navbar-brand-font-size: 1.25rem;
+            --bs-navbar-brand-color: rgba(var(--bs-emphasis-color-rgb), 1);
+            --bs-navbar-brand-hover-color: rgba(var(--bs-emphasis-color-rgb), 1);
+            --bs-navbar-nav-link-padding-x: 0.5rem;
+            --bs-navbar-toggler-padding-y: 0.25rem;
+            --bs-navbar-toggler-padding-x: 0.75rem;
+            --bs-navbar-toggler-font-size: 1.25rem;
+            --bs-navbar-toggler-icon-bg: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(33, 37, 41, 0.75)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+            --bs-navbar-toggler-border-color: rgba(var(--bs-emphasis-color-rgb), 0.15);
+            --bs-navbar-toggler-border-radius: var(--bs-border-radius);
+            --bs-navbar-toggler-focus-width: 0.25rem;
+            flex-wrap: wrap;
+            padding: var(--bs-navbar-padding-y) var(--bs-navbar-padding-x);
+            position: relative
+        }
+
+        .navbar,
+        .navbar>.container-fluid {
+            align-items: center;
+            display: flex;
+            justify-content: space-between
+        }
+
+        .navbar>.container-fluid {
+            flex-wrap: inherit
+        }
+
+        .navbar-brand {
+            color: var(--bs-navbar-brand-color);
+            font-size: var(--bs-navbar-brand-font-size);
+            margin-right: var(--bs-navbar-brand-margin-end);
+            padding-bottom: var(--bs-navbar-brand-padding-y);
+            padding-top: var(--bs-navbar-brand-padding-y);
+            text-decoration: none;
+            white-space: nowrap
+        }
+
+        .navbar-nav {
+            --bs-nav-link-padding-x: 0;
+            --bs-nav-link-padding-y: 0.5rem;
+            --bs-nav-link-color: var(--bs-navbar-color);
+            --bs-nav-link-hover-color: var(--bs-navbar-hover-color);
+            --bs-nav-link-disabled-color: var(--bs-navbar-disabled-color);
+            display: flex;
+            flex-direction: column;
+            list-style: none;
+            margin-bottom: 0;
+            padding-left: 0
+        }
+
+        .navbar-nav .dropdown-menu {
+            position: static
+        }
+
+        .navbar-collapse {
+            align-items: center;
+            flex-basis: 100%;
+            flex-grow: 1
+        }
+
+        .navbar-toggler {
+            background-color: transparent;
+            border: var(--bs-border-width) solid var(--bs-navbar-toggler-border-color);
+            border-radius: var(--bs-navbar-toggler-border-radius);
+            color: var(--bs-navbar-color);
+            font-size: var(--bs-navbar-toggler-font-size);
+            line-height: 1;
+            padding: var(--bs-navbar-toggler-padding-y) var(--bs-navbar-toggler-padding-x)
+        }
+
+        .navbar-toggler-icon {
+            background-image: var(--bs-navbar-toggler-icon-bg);
+            background-position: 50%;
+            background-repeat: no-repeat;
+            background-size: 100%;
+            display: inline-block;
+            height: 1.5em;
+            vertical-align: middle;
+            width: 1.5em
+        }
+
+        @media (min-width:992px) {
+            .navbar-expand-lg {
+                flex-wrap: nowrap;
+                justify-content: flex-start
+            }
+
+            .navbar-expand-lg .navbar-nav {
+                flex-direction: row
+            }
+
+            .navbar-expand-lg .navbar-nav .dropdown-menu {
+                position: absolute
+            }
+
+            .navbar-expand-lg .navbar-nav .nav-link {
+                padding-left: var(--bs-navbar-nav-link-padding-x);
+                padding-right: var(--bs-navbar-nav-link-padding-x)
+            }
+
+            .navbar-expand-lg .navbar-collapse {
+                display: flex !important;
+                flex-basis: auto
+            }
+
+            .navbar-expand-lg .navbar-toggler {
+                display: none
+            }
+        }
+
+        .accordion-item:last-of-type>.accordion-collapse {
+            border-bottom-left-radius: var(--bs-accordion-border-radius);
+            border-bottom-right-radius: var(--bs-accordion-border-radius)
+        }
+
+        .accordion-body {
+            padding: var(--bs-accordion-body-padding-y) var(--bs-accordion-body-padding-x)
+        }
+
+        .accordion-flush>.accordion-item>.accordion-collapse {
+            border-radius: 0
+        }
+
+        :root {
+            --bs-carousel-indicator-active-bg: #fff;
+            --bs-carousel-caption-color: #fff
+        }
+
+        .d-none {
+            display: none !important
+        }
+
+        .position-relative {
+            position: relative !important
+        }
+
+        .justify-content-end {
+            justify-content: flex-end !important
+        }
+
+        .align-items-center {
+            align-items: center !important
+        }
+
+        .ms-auto {
+            margin-left: auto !important
+        }
+
+        .px-0 {
+            padding-left: 0 !important;
+            padding-right: 0 !important
+        }
+
+        .pt-0 {
+            padding-top: 0 !important
+        }
+
+        .pb-0 {
+            padding-bottom: 0 !important
+        }
+
+        .text-center {
+            text-align: center !important
+        }
+
+        @media (min-width:992px) {
+            .text-lg-start {
+                text-align: left !important
+            }
+        }
+
+        body::-webkit-scrollbar {
+            width: 10px
+        }
+
+        body::-webkit-scrollbar-track {
+            background: #fff;
+            box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+            -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3)
+        }
+
+        body::-webkit-scrollbar-thumb {
+            background-color: #0f232c;
+            border-radius: 25px
+        }
+
+        body,
+        html {
+            font-family: Saira, sans-serif;
+            overflow-x: hidden;
+            position: relative
+        }
+
+        .h1,
+        .h2,
+        .h4,
+        h1,
+        h2 {
+            color: #0f232c;
+            display: inline-block
+        }
+
+        .h1,
+        h1 {
+            font-size: 40px
+        }
+
+        .h1,
+        .h2,
+        h1,
+        h2 {
+            font-family: MultiDisplay-Medium, sans-serif;
+            margin-bottom: 20px
+        }
+
+        .h2,
+        h2 {
+            font-size: 35px
+        }
+
+        .h4 {
+            font-family: MultiDisplay-Medium, sans-serif;
+            margin-bottom: 20px
+        }
+
+        .h4 {
+            font-size: 24px
+        }
+
+        p {
+            color: #000;
+            font-size: 16px;
+            margin-bottom: 1rem
+        }
+
+        a {
+            box-shadow: none;
+            outline: 0 !important;
+            text-decoration: none !important
+        }
+
+        section {
+            margin: 0 auto;
+            max-width: 1920px;
+            padding: 50px 0;
+            position: relative
+        }
+
+        ul {
+            margin: 0;
+            padding: 0
+        }
+
+        ul li {
+            color: #000;
+            font-size: 16px;
+            list-style: none;
+            margin-bottom: 1rem
+        }
+
+        .btn-order {
+            background: #2c1b18;
+            border: 1px solid #2c1b18;
+            border-radius: 50px;
+            color: #fff;
+            display: inline-block;
+            font-size: 16px;
+            font-weight: 600;
+            overflow: hidden;
+            padding: 14px 40px;
+            position: relative;
+            text-align: center
+        }
+
+        .btn-order svg {
+            margin-right: 6px
+        }
+
+        .btn-live {
+            background: #feb92e;
+            border: 1px solid #feb92e;
+            border-radius: 50px;
+            color: #000;
+            display: inline-flex;
+            font-size: 16px;
+            font-weight: 600;
+            overflow: hidden;
+            padding: 14px 40px;
+            position: relative;
+            text-align: center
+        }
+
+        .btn-live:after {
+            animation: 1s infinite slide;
+            background: linear-gradient(90deg, rgba(253, 255, 255, 0), hsla(0, 0%, 100%, .2) 40%, rgba(128, 186, 232, 0) 70%, rgba(125, 185, 232, 0));
+            content: "";
+            height: 100%;
+            position: absolute;
+            top: 0;
+            transform: translateX(100%);
+            width: 100%;
+            z-index: 1
+        }
+
+        .btn-chat {
+            background-color: #fff;
+            border: none;
+            border-radius: 50em;
+            display: inline-flex;
+            margin-left: 12px;
+            margin-top: 10px;
+            padding: 7px 30px 7px 10px
+        }
+
+        .btn-chat {
+            align-items: center;
+            font-size: 16px
+        }
+
+        .horizontal-shaking {
+            animation: 5s infinite horizontal-shaking;
+            animation-delay: 1s
+        }
+
+        @keyframes horizontal-shaking {
+
+            0%,
+            18%,
+            to {
+                transform: translateZ(0)
+            }
+
+            10%,
+            14%,
+            2%,
+            6% {
+                transform: translate3d(-5px, 0, 0)
+            }
+
+            12%,
+            16%,
+            4%,
+            8% {
+                transform: translate3d(5px, 0, 0)
+            }
+        }
+
+        .star-icons {
+            align-items: center;
+            display: inline-flex;
+            gap: 2px;
+            justify-content: flex-start
+        }
+
+        .star-icons svg {
+            fill: #f90;
+            height: 18px;
+            width: 18px
+        }
+
+        .lazyload {
+            opacity: 0
+        }
+
+        @media (min-width:1700px) {
+
+            .btn-live,
+            .btn-order {
+                padding: 16px 40px
+            }
+
+            .btn-chat {
+                padding: 9px 30px 9px 10px
+            }
+
+            header .navbar {
+                padding: 20px 0 !important
+            }
+
+            header .btn-live,
+            header .navbar .nav-item .btn-order {
+                padding: 12px 30px !important
+            }
+
+            header .navbar .contact-info li .nav-link {
+                padding: 12px 24px !important
+            }
+        }
+
+        @media (max-width:767px) {
+            .btn-live {
+                margin-left: 0
+            }
+        }
+
+        header {
+            background: 0 0;
+            left: 0;
+            margin: 0 auto;
+            max-width: 1920px;
+            position: fixed;
+            right: 0;
+            top: 0;
+            z-index: 9999
+        }
+
+        header .navbar {
+            padding: 16px 0
+        }
+
+        header .navbar .contact-info li {
+            margin-bottom: 0
+        }
+
+        header .navbar .contact-info li .nav-link {
+            border: 1px solid #000;
+            border-radius: 24px;
+            padding: 8px 12px
+        }
+
+        header .navbar .contact-info li svg {
+            height: 18px;
+            margin-right: 4px;
+            width: 18px
+        }
+
+        header .navbar .nav-link {
+            color: #000;
+            margin: 0 12px
+        }
+
+        header .navbar .nav-item .btn-order {
+            animation: 1s ease-in-out infinite heartbeat;
+            font-size: 16px;
+            padding: 10px 30px;
+            position: relative;
+            top: 4px
+        }
+
+        header .navbar .nav-item .btn-order:after {
+            animation: 1s infinite slide;
+            background: linear-gradient(90deg, rgba(253, 255, 255, 0), hsla(0, 0%, 100%, .2) 40%, rgba(128, 186, 232, 0) 70%, rgba(125, 185, 232, 0));
+            content: "";
+            height: 100%;
+            position: absolute;
+            top: 0;
+            transform: translateX(100%);
+            width: 100%;
+            z-index: 1
+        }
+
+        @keyframes slide {
+            0% {
+                transform: translateX(-100%)
+            }
+
+            to {
+                transform: translateX(100%)
+            }
+        }
+
+        header .navbar .navbar-brand img {
+            -o-object-fit: scale-down;
+            object-fit: scale-down;
+            width: 212px
+        }
+
+        header .navbar .navbar-nav li {
+            font-family: Saira, sans-serif;
+            margin-bottom: 0
+        }
+
+        header .btn-live {
+            background-color: transparent;
+            border-color: #000;
+            color: #000;
+            font-size: 16px;
+            margin: 0 14px 0 10px;
+            overflow: hidden;
+            padding: 10px 30px;
+            position: relative
+        }
+
+        header .btn-live svg {
+            margin-right: 4px
+        }
+
+        header .btn-live:after {
+            animation: 1.4s ease-out pulsate;
+            animation-iteration-count: infinite;
+            background: #55e725;
+            border: 2px solid #39c60b;
+            border-radius: 50%;
+            bottom: 0;
+            content: "";
+            height: 12px;
+            left: 47px;
+            opacity: 0;
+            position: absolute;
+            top: 4px;
+            width: 12px
+        }
+
+        header .btn-live:before {
+            background: linear-gradient(120deg, hsla(0, 0%, 100%, 0), hsla(0, 0%, 100%, .6) 50%, hsla(0, 0%, 100%, 0));
+            content: "";
+            display: none;
+            height: 100%;
+            left: 0;
+            position: absolute;
+            top: 0;
+            transform: skewX(-20deg);
+            width: 50%
+        }
+
+        @keyframes pulsate {
+            0% {
+                opacity: 0;
+                transform: scale(.5)
+            }
+
+            50% {
+                opacity: 1
+            }
+
+            to {
+                opacity: 0;
+                transform: scale(1)
+            }
+        }
+
+        @keyframes heartbeat {
+            0% {
+                transform: scale(1)
+            }
+
+            50% {
+                transform: scale(1.1)
+            }
+
+            to {
+                transform: scale(1)
+            }
+        }
+
+        @media (min-width:1200px)and (max-width:1399px) {
+
+            .h1,
+            h1 {
+                font-size: 35px !important
+            }
+
+            .h2,
+            h2 {
+                font-size: 30px !important
+            }
+
+            .h4 {
+                font-size: 22px !important
+            }
+
+            header .navbar .navbar-nav .nav-link {
+                font-size: 15px
+            }
+
+            header .navbar .navbar-nav .btn-live,
+            header .navbar .navbar-nav .btn-order {
+                font-size: 16px;
+                padding: 8px 20px
+            }
+
+            header .navbar .navbar-nav .btn-live:after {
+                left: 37px
+            }
+        }
+
+        @media (min-width:992px)and (max-width:1199px) {
+            header .navbar .navbar-nav {
+                align-items: center
+            }
+
+            header .navbar .navbar-nav .btn-live,
+            header .navbar .navbar-nav .btn-order {
+                font-size: 12px;
+                padding: 8px 20px
+            }
+
+            header .navbar .navbar-nav .btn-live svg {
+                width: 18px
+            }
+
+            header .navbar .navbar-nav .btn-live:after {
+                left: 33px
+            }
+
+            header .navbar .nav-link {
+                font-size: 12px;
+                margin: 0 6px;
+                padding: 0
+            }
+        }
+
+        @media (max-width:991px) {
+            section.cta-banner img {
+                display: none
+            }
+
+            section.award-banner .img-box {
+                display: none
+            }
+
+            header .container {
+                max-width: 100%
+            }
+
+            header .navbar .nav-link {
+                text-align: center
+            }
+
+            header .btn-live {
+                display: none
+            }
+
+            header .navbar-collapse {
+                background: #f6dd97;
+                box-shadow: 9px 0 10px 0 rgba(0, 0, 0, .141);
+                height: 100vh;
+                left: -10px;
+                padding: 50px 30px;
+                position: absolute;
+                top: 0;
+                width: 80%
+            }
+
+            header .navbar-collapse .navbar-nav {
+                align-items: flex-start;
+                justify-content: flex-start
+            }
+
+            section.main-banner .img-box {
+                display: none
+            }
+        }
+
+        @media (max-width:575.98px) {
+            section {
+                padding: 50px 0
+            }
+
+            .h1,
+            h1 {
+                font-size: 32px !important
+            }
+
+            .h2,
+            h2 {
+                font-size: 30px !important
+            }
+
+            .btn-order {
+                margin-top: 16px
+            }
+
+            header .btn-live,
+            header .btn-order {
+                margin-bottom: 10px;
+                margin-top: 10px
+            }
+        }
+
+        footer .social .sr-only {
+            display: none
+        }
+
+        section.main-banner {
+            background: #f6d067;
+            background: linear-gradient(0deg, #f6d067, #f6f3ea 60%);
+            min-height: 600px;
+            padding: 150px 0 70px
+        }
+
+        section.main-banner .container {
+            position: relative
+        }
+
+        section.main-banner .container .circle-vector {
+            bottom: -40px;
+            left: -5%;
+            position: absolute;
+            z-index: 0
+        }
+
+        section.main-banner .container .col-lg-6 {
+            position: relative
+        }
+
+        section.main-banner .container .col-lg-6 .capsule-vector {
+            position: absolute;
+            right: -30px;
+            top: -30px;
+            z-index: -1
+        }
+
+        section.main-banner .h1 {
+            color: #0f232c;
+            font-family: MultiDisplay-Regular, sans-serif;
+            font-size: 32px;
+            margin-bottom: 14px
+        }
+
+        section.main-banner .h1 span {
+            display: block;
+            font-family: MultiDisplay-Medium, sans-serif;
+            font-size: 37px
+        }
+
+        section.main-banner .h4 {
+            font-family: Saira-Medium, sans-serif;
+            font-size: 16px !important;
+            margin-bottom: 14px
+        }
+
+        section.main-banner .h4 .star-icons {
+            gap: 0
+        }
+
+        section.main-banner .h4 .star-icons svg {
+            height: 16px;
+            width: 16px
+        }
+
+        section.main-banner p {
+            margin-bottom: 30px
+        }
+
+        section.main-banner .col-12.col-lg-6 {
+            z-index: 1
+        }
+
+        section.main-banner .btn-order {
+            margin-left: 10px
+        }
+
+        section.top-brands {
+            background-color: #2c1b18
+        }
+
+        section.book-lovers {
+            padding: 65px 0
+        }
+
+        section.book-lovers .h2 {
+            margin-bottom: 48px
+        }
+
+        section.book-lovers .simple-card {
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 6px 30px rgba(0, 0, 0, .1);
+            height: 100%;
+            padding: 30px 37px 15px
+        }
+
+        @media (min-width:1700px) {
+            section.main-banner:after {
+                left: 160px
+            }
+        }
+
+        @media (max-width:575px) {
+            section.main-banner {
+                align-content: center;
+                height: 100vh;
+                padding-top: 150px
+            }
+
+            section.main-banner .h1 span {
+                display: inline;
+                font-size: unset
+            }
+
+            section.main-banner .btn-live {
+                display: block;
+                width: 100%
+            }
+
+            section.main-banner .btn-order {
+                display: block;
+                margin-left: 0;
+                margin-top: 16px;
+                width: 100%
+            }
+        }
+    </style>
+    <script src="js/rocket-loader.min.js" data-cf-settings="c72f6a2fff90882ff2180662-|49"></script>
+    <link rel="stylesheet" href="css/home.css">
+    <style>
+        @font-face {
+            font-display: swap;
+            font-family: 'Saira-Light';
+            font-style: normal;
+            font-weight: 300;
+            src: url('fonts/saira-v21-latin-300.woff2') format('woff2');
+        }
+
+        @font-face {
+            font-display: swap;
+            font-family: 'Saira';
+            font-style: normal;
+            font-weight: 400;
+            src: url('fonts/saira-v21-latin-regular.woff2') format('woff2');
+        }
+
+        @font-face {
+            font-display: swap;
+            font-family: 'Saira-Medium';
+            font-style: normal;
+            font-weight: 500;
+            src: url('fonts/saira-v21-latin-500.woff2') format('woff2');
+        }
+
+        @font-face {
+            font-display: swap;
+            font-family: 'Saira-SemiBold';
+            font-style: normal;
+            font-weight: 600;
+            src: url('fonts/saira-v21-latin-600.woff2') format('woff2');
+        }
+
+        @font-face {
+            font-display: swap;
+            font-family: 'Saira-Bold';
+            font-style: normal;
+            font-weight: 700;
+            src: url('fonts/saira-v21-latin-700.woff2') format('woff2');
+        }
+
+        @font-face {
+            font-display: swap;
+            font-family: 'MultiDisplay-Regular';
+            font-style: normal;
+            font-weight: 400;
+            src: url('fonts/multi-display-regular.woff2') format('woff2');
+        }
+
+        @font-face {
+            font-display: swap;
+            font-family: 'MultiDisplay-Medium';
+            font-style: normal;
+            font-weight: 500;
+            src: url('fonts/multi-display-medium.woff2') format('woff2');
+        }
+    </style>
+    
+</head>
+
+<body>
+    <header class="main-header pt-0 pb-0" id="scroll-control">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="index.html">
+                        <img src="images/australian-publishers.svg" class="img-fluid order-page-none" alt="">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+                        <ul class="contact-info">
+                            <li class="order-page-left d-none">
+                                <p>Your One-Stop Publishing Partner In Australia!</p>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"> <path d="M280 0C408.1 0 512 103.9 512 232c0 13.3-10.7 24-24 24s-24-10.7-24-24c0-101.6-82.4-184-184-184c-13.3 0-24-10.7-24-24s10.7-24 24-24zm8 192a32 32 0 1 1 0 64 32 32 0 1 1 0-64zm-32-72c0-13.3 10.7-24 24-24c75.1 0 136 60.9 136 136c0 13.3-10.7 24-24 24s-24-10.7-24-24c0-48.6-39.4-88-88-88c-13.3 0-24-10.7-24-24zM117.5 1.4c19.4-5.3 39.7 4.6 47.4 23.2l40 96c6.8 16.3 2.1 35.2-11.6 46.3L144 207.3c33.3 70.4 90.3 127.4 160.7 160.7L345 318.7c11.2-13.7 30-18.4 46.3-11.6l96 40c18.6 7.7 28.5 28 23.2 47.4l-24 88C481.8 499.9 466 512 448 512C200.6 512 0 311.4 0 64C0 46 12.1 30.2 29.5 25.4l88-24z" fill="currentColor"></path> </svg>
+                                     +61 111 222 333 
+                                </a>
+                            </li>
+                        </ul>
+                        
+                        <ul class="navbar-nav align-items-center ms-auto">
+                            <li class="nav-item dropdown">
+                                <span class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Company </span>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <a class="dropdown-item " href="about-us.html"> About us </a>
+                                    <a class="dropdown-item " href="become-an-author.html"> Become An Author </a>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown"><span class="nav-link dropdown-toggle"
+                                    id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false"> Services </span>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <a class="dropdown-item " href="#"> Comic Book </a>
+                                    <a class="dropdown-item " href="#"> Book Marketing </a>
+                                    <a class="dropdown-item " href="#"> eBook Publishing </a>
+                                    <a class="dropdown-item " href="#"> Book Printing Services </a>
+                                    <a class="dropdown-item " href="#"> Book Cover Designing </a>
+                                    <a class="dropdown-item " href="#"> Childrens Book Publishing </a>
+                                    <a class="dropdown-item " href="#"> Poetry & Poem Publishing </a>
+                                    <a class="dropdown-item " href="#"> Book Editing & Proofreading </a>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link " href="reviews.html"> Reviews </a>
+                            </li>
+                            <!-- <li class="nav-item">
+                                <button class="btn-live">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="23.218" height="22.526" viewBox="0 0 23.218 22.526"> <g transform="translate(-10.66 -5.269)"> <path d="M31.007,21.137a5.421,5.421,0,0,1-3.161-1.017.727.727,0,0,1-.676.472H17.4a.727.727,0,0,1,0-1.453h9.389a5.421,5.421,0,0,1-.872-5.3,13.081,13.081,0,0,0-3.633-.509c-6.409,0-11.627,4.564-11.627,10.174s5.218,10.174,11.627,10.174a13.081,13.081,0,0,0,3.546-.494l4.019,2.558a.727.727,0,0,0,1.119-.61V30.235A9.447,9.447,0,0,0,33.878,23.5a8.967,8.967,0,0,0-.494-2.907A5.421,5.421,0,0,1,31.007,21.137Zm-6,6.722h-5.45a.727.727,0,1,1,0-1.453h5.45a.727.727,0,1,1,0,1.453Zm2.362-3.633H17.2a.727.727,0,1,1,0-1.453H27.374a.727.727,0,1,1,0,1.453Z" transform="translate(0 -8.056)" fill="currentColor"></path> </g> </svg>
+                                    Let's Chat 
+                                </button>
+                            </li> -->
+                            <li class="nav-item">
+                                <a href="get-started.html" class="btn-order"> Get Started </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="main-banner text-lg-start text-center">
+            <div class="container">
+                <div class="img-box">
+                    <img src="images/layer-circle.webp" class="img-fluid circle-vector" alt="">
+                </div>
+                <div class="row align-items-center">
+                    <div class="col-12 col-lg-6">
+                        <h1 class="h1">Australia’s Association Of Top Book Authors & Publishers</h1>
+                        <p>AustralianPublishers.com.au offers seamless book publishing solutions, all backed by a team of expert publishers dedicated to your success.</p>
+                            <a href="get-started.html" class="btn-live">Publish My Book</a>
+                            <a href="contact-us.html" role="button" type="button" class="btn-order horizontal-shaking">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="24" viewBox="0 0 640 512"><path d="M208 352c114.9 0 208-78.8 208-176S322.9 0 208 0S0 78.8 0 176c0 38.6 14.7 74.3 39.6 103.4c-3.5 9.4-8.7 17.7-14.2 24.7c-4.8 6.2-9.7 11-13.3 14.3c-1.8 1.6-3.3 2.9-4.3 3.7c-.5 .4-.9 .7-1.1 .8l-.2 .2s0 0 0 0s0 0 0 0C1 327.2-1.4 334.4 .8 340.9S9.1 352 16 352c21.8 0 43.8-5.6 62.1-12.5c9.2-3.5 17.8-7.4 25.2-11.4C134.1 343.3 169.8 352 208 352zM448 176c0 112.3-99.1 196.9-216.5 207C255.8 457.4 336.4 512 432 512c38.2 0 73.9-8.7 104.7-23.9c7.5 4 16 7.9 25.2 11.4c18.3 6.9 40.3 12.5 62.1 12.5c6.9 0 13.1-4.5 15.2-11.1c2.1-6.6-.2-13.8-5.8-17.9c0 0 0 0 0 0s0 0 0 0l-.2-.2c-.2-.2-.6-.4-1.1-.8c-1-.8-2.5-2-4.3-3.7c-3.6-3.3-8.5-8.1-13.3-14.3c-5.5-7-10.7-15.4-14.2-24.7c24.9-29 39.6-64.7 39.6-103.4c0-92.8-84.9-168.9-192.6-175.5c.4 5.1 .6 10.3 .6 15.5z"fill="currentColor"></path></svg> 
+                                Consult Our Expert 
+                            </a>
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <div class="img-box">
+                            <img src="https://www.australianpublishers.com.au/assets/frontend/images/bg/top-book-authors-in-australia.webp" class="img-fluid" alt="">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- About Page After Hero Section -->
+<section id="about-page-after-hero-section">
+  <div class="about-page-after-hero-container">
+    <!-- Left Image -->
+    <div class="about-page-after-hero-left">
+      <img src="https://www.australianpublishers.com.au/assets/frontend/images/bg/passionate-about-publishing.webp" alt="Passionate About Publishing">
+    </div>
+
+    <!-- Right Content -->
+    <div class="about-page-after-hero-right">
+      <h2 class="about-page-after-hero-heading">We’re Passionate About Publishing Your Hidden Books</h2>
+      <p class="about-page-after-hero-paragraph">
+        Every great book deserves to be on leading sites, not collecting dust on your shelf. We have dedicated ourselves to bringing your hidden gems into the limelight by launching them on renowned platforms. Whether you’re a first-time or a seasoned author, we provide end-to-end publishing services to turn your books into a smashing hit.
+      </p>
+      <h3 class="about-page-after-hero-subheading">4 Out of 5 Authors Choose Us!</h3>
+      <p class="about-page-after-hero-subparagraph">
+        Authors trust us because we take the hassle out of the publishing process. Here’s why they choose us every single time:
+      </p>
+      <ul class="about-page-after-hero-list">
+        <li>100% Approval Rate on Every Platform.</li>
+        <li>All Services from Formatting to Marketing.</li>
+        <li>Quick Launch Time at Affordable Prices.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- CTA SEction -->
+<section id="about-page-after-hero-cta">
+  <div class="about-page-after-hero-cta-container">
+    <h3 class="about-page-after-hero-cta-subheading">Publishing Without Royalties</h3>
+    <h2 class="about-page-after-hero-cta-heading">
+      Frustrated with Traditional Publishing? Keep 100% of Your Rights & Royalties with Us!
+    </h2>
+
+    <div class="btn-box">
+                    <a href="get-started.html" class="btn-live">Request a Demo</a>
+                    <a href="contact-us.html" class="btn-call horizontal-shaking">
+                        <span class="icon-box">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"> <path d="M280 0C408.1 0 512 103.9 512 232c0 13.3-10.7 24-24 24s-24-10.7-24-24c0-101.6-82.4-184-184-184c-13.3 0-24-10.7-24-24s10.7-24 24-24zm8 192a32 32 0 1 1 0 64 32 32 0 1 1 0-64zm-32-72c0-13.3 10.7-24 24-24c75.1 0 136 60.9 136 136c0 13.3-10.7 24-24 24s-24-10.7-24-24c0-48.6-39.4-88-88-88c-13.3 0-24-10.7-24-24zM117.5 1.4c19.4-5.3 39.7 4.6 47.4 23.2l40 96c6.8 16.3 2.1 35.2-11.6 46.3L144 207.3c33.3 70.4 90.3 127.4 160.7 160.7L345 318.7c11.2-13.7 30-18.4 46.3-11.6l96 40c18.6 7.7 28.5 28 23.2 47.4l-24 88C481.8 499.9 466 512 448 512C200.6 512 0 311.4 0 64C0 46 12.1 30.2 29.5 25.4l88-24z" fill="currentColor"></path></svg>
+                        </span>
+                        <span>
+                            <small>Consult Our Expert</small> +61 290 991 615 
+                        </span>
+                    </a>
+                </div>
+
+  </div>
+</section>
+
+
+<!-- Helping Authors Section -->
+<section id="about-helping-section">
+  <div class="about-helping-section-container">
+    <!-- Left Content -->
+    <div class="about-helping-section-left">
+      <h2 class="about-helping-section-heading">Helping Author Find Their Way to Bestseller Shelf</h2>
+      <p class="about-helping-section-paragraph">
+        Every author dreams of taking a book on the best-selling aisle, but the journey can be challenging. If we’re by your side, your book can make a difference in the literary world. Our experts handle everything from editing to book cover design and smooth distribution to ensure your book reaches your targeted audience seamlessly.
+      </p>
+      <p class="about-helping-section-paragraph">
+        Besides our complete range of publishing services, we are known for our effective plans. We strategize your book publishing and choose proven ways to help you gain the visibility you need. Boost your sales, secure a spot in the bestseller zone, and make your way to the award-winning author—all by choosing us as your companion.
+      </p>
+      <div class="btn-box">
+                    <a href="get-started.html" class="btn-live">Request a Demo</a>
+                    <a href="contact-us.html" class="btn-call horizontal-shaking">
+                        <span class="icon-box">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"> <path d="M280 0C408.1 0 512 103.9 512 232c0 13.3-10.7 24-24 24s-24-10.7-24-24c0-101.6-82.4-184-184-184c-13.3 0-24-10.7-24-24s10.7-24 24-24zm8 192a32 32 0 1 1 0 64 32 32 0 1 1 0-64zm-32-72c0-13.3 10.7-24 24-24c75.1 0 136 60.9 136 136c0 13.3-10.7 24-24 24s-24-10.7-24-24c0-48.6-39.4-88-88-88c-13.3 0-24-10.7-24-24zM117.5 1.4c19.4-5.3 39.7 4.6 47.4 23.2l40 96c6.8 16.3 2.1 35.2-11.6 46.3L144 207.3c33.3 70.4 90.3 127.4 160.7 160.7L345 318.7c11.2-13.7 30-18.4 46.3-11.6l96 40c18.6 7.7 28.5 28 23.2 47.4l-24 88C481.8 499.9 466 512 448 512C200.6 512 0 311.4 0 64C0 46 12.1 30.2 29.5 25.4l88-24z" fill="currentColor"></path></svg>
+                        </span>
+                        <span>
+                            <small>Consult Our Expert</small> +61 290 991 615 
+                        </span>
+                    </a>
+                </div>
+    </div>
+
+    <!-- Right Image -->
+    <div class="about-helping-section-right">
+      <img src="https://www.australianpublishers.com.au/assets/frontend/images/bg/the-secret-wife.webp" alt="Helping Authors">
+    </div>
+  </div>
+</section>
+
+<!-- Overview -->
+ <section class="about-overview-main-container">
+    <div class="about-overview-inner-container">
+        <div class="about-overview-box">
+            <h3 style="font-size: 45px !important;">12+</h3>
+            <span>Years Of Experience</span>
+        </div>
+        <div class="about-overview-box">
+            <h3 style="font-size: 45px !important;">155+</h3>
+            <span>EXPERT PUBLISHERS</span>
+        </div>
+        <div class="about-overview-box">
+            <h3 style="font-size: 45px !important;">700+</h3>
+            <span>BESTSELLERS ACHIEVED</span>
+        </div>
+        <div class="about-overview-box">
+            <h3 style="font-size: 45px !important;">100K+</h3>
+            <span>COPIES SOLD WORLDWIDE</span>
+        </div>
+    </div>
+ </section>
+
+
+
+        <section class="book-lovers text-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2 class="h2">Features That Make Our Book Publishing Next Level</h2>
+                    </div>
+                </div>
+                <div class="row position-relative gy-4">
+  <!-- Card 01 -->
+  <div class="col-12 col-md-6 col-lg-4">
+    <div class="simple-card">
+      <div class="img-box">
+        <span>01</span>
+        <!-- <img src="images/publishing-120-platforms.svg" class="img-fluid" alt=""> -->
+      </div>
+      <span class="h5">Publishing on 120+ Platforms</span>
+      <p>
+        You no longer have to wander at agencies for your needs. We cater to all your requests and release your book on any site that you want. From Amazon Kindle, Apple Books, and Barnes & Noble to Kobo, we’ve got your back.
+      </p>
+    </div>
+  </div>
+
+  <!-- Card 02 -->
+  <div class="col-12 col-md-6 col-lg-4">
+    <div class="simple-card">
+      <div class="img-box">
+        <span>02</span>
+        <!-- <img src="images/rejection-free-launch.svg" class="img-fluid" alt=""> -->
+      </div>
+      <span class="h5">Rejection-Free Book Launch</span>
+      <p>
+        Traditional publishers only give you rejections. That’s where we come in with our expert services, strategizing your next book launch carefully. With a meticulous plan, we ensure your book never faces any more rejection.
+      </p>
+    </div>
+  </div>
+
+  <!-- Card 03 -->
+  <div class="col-12 col-md-6 col-lg-4">
+    <div class="simple-card">
+      <div class="img-box">
+        <span>03</span>
+        <!-- <img src="images/fast-turnaround.svg" class="img-fluid" alt=""> -->
+      </div>
+      <span class="h5">Incredibly Fast Turnaround</span>
+      <p>
+        We have proven ourselves many times by publishing your books in record time. Unlike other agencies, we only take a few days to make your book go live on the desired platform, without compromising on the services.
+      </p>
+    </div>
+  </div>
+
+  <!-- Card 04 -->
+  <div class="col-12 col-md-6 col-lg-4">
+    <div class="simple-card">
+      <div class="img-box">
+        <span>04</span>
+        <!-- <img src="images/customer-support.svg" class="img-fluid" alt=""> -->
+      </div>
+      <span class="h5">24/7 Customer Support</span>
+      <p>
+        Need a quick quote, or do you have an urgent query? No matter the reason, we are here at your service all day long. Our team resolves all your issues by responding promptly, ensuring a smooth customer experience.
+      </p>
+    </div>
+  </div>
+
+  <!-- Card 05 -->
+  <div class="col-12 col-md-6 col-lg-4">
+    <div class="simple-card">
+      <div class="img-box">
+        <span>05</span>
+        <!-- <img src="images/ownership-rights.svg" class="img-fluid" alt=""> -->
+      </div>
+      <span class="h5">100% Ownership Rights</span>
+      <p>
+        Authors often lose rights over their own content, but that never happens here! We are all about providing you peace of mind by transferring ownership to you on payment. Your books, your profits, no hidden charges.
+      </p>
+    </div>
+  </div>
+
+  <!-- Card 06 -->
+  <div class="col-12 col-md-6 col-lg-4">
+    <div class="simple-card">
+      <div class="img-box">
+        <span>06</span>
+        <!-- <img src="images/entertaining-genre.svg" class="img-fluid" alt=""> -->
+      </div>
+      <span class="h5">Entertaining Every Genre</span>
+      <p>
+        No genre goes out of our capabilities as we are powered by professional publishers. From fiction to memoir, poetry to comic, and autobiography to children's book, we publish books across all genres with complete dedication.
+      </p>
+    </div>
+  </div>
+
+  <div class="oval-shadow"></div>
+</div>
+
+                <div class="btn-box">
+                    <a href="get-started.html" class="btn-live">Let’s Get Started</a>
+                    <a href="contact-us.html" class="btn-call horizontal-shaking">
+                        <span class="icon-box">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"> <path d="M280 0C408.1 0 512 103.9 512 232c0 13.3-10.7 24-24 24s-24-10.7-24-24c0-101.6-82.4-184-184-184c-13.3 0-24-10.7-24-24s10.7-24 24-24zm8 192a32 32 0 1 1 0 64 32 32 0 1 1 0-64zm-32-72c0-13.3 10.7-24 24-24c75.1 0 136 60.9 136 136c0 13.3-10.7 24-24 24s-24-10.7-24-24c0-48.6-39.4-88-88-88c-13.3 0-24-10.7-24-24zM117.5 1.4c19.4-5.3 39.7 4.6 47.4 23.2l40 96c6.8 16.3 2.1 35.2-11.6 46.3L144 207.3c33.3 70.4 90.3 127.4 160.7 160.7L345 318.7c11.2-13.7 30-18.4 46.3-11.6l96 40c18.6 7.7 28.5 28 23.2 47.4l-24 88C481.8 499.9 466 512 448 512C200.6 512 0 311.4 0 64C0 46 12.1 30.2 29.5 25.4l88-24z" fill="currentColor"></path></svg>
+                        </span>
+                        <span>
+                            <small>Consult Our Expert</small> +61 290 991 615 
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+    <footer class="footer text-center text-md-start">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-4">
+                    <img src="https://www.australianpublishers.com.au/assets/frontend/images/logo/australian-publishers.svg" class="img-fluid lazyload mb-4" alt="">
+                    <p>AustralianPublishers.com.au is a trusted partner, bringing your stories to 100+ acclaimed  platforms, covering 50+ genres, and ensuring your publication never faces rejection.</p>
+                    <div class="s-details">
+                        <span class="h5">Reach Us:</span>
+                        <address>908 1D Broughton Street, Parramatta NSW, Australia 2150</address>
+                        <ul>
+                            <li>
+                                <a class="cont-link" href="#">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"> <path d="M280 0C408.1 0 512 103.9 512 232c0 13.3-10.7 24-24 24s-24-10.7-24-24c0-101.6-82.4-184-184-184c-13.3 0-24-10.7-24-24s10.7-24 24-24zm8 192a32 32 0 1 1 0 64 32 32 0 1 1 0-64zm-32-72c0-13.3 10.7-24 24-24c75.1 0 136 60.9 136 136c0 13.3-10.7 24-24 24s-24-10.7-24-24c0-48.6-39.4-88-88-88c-13.3 0-24-10.7-24-24zM117.5 1.4c19.4-5.3 39.7 4.6 47.4 23.2l40 96c6.8 16.3 2.1 35.2-11.6 46.3L144 207.3c33.3 70.4 90.3 127.4 160.7 160.7L345 318.7c11.2-13.7 30-18.4 46.3-11.6l96 40c18.6 7.7 28.5 28 23.2 47.4l-24 88C481.8 499.9 466 512 448 512C200.6 512 0 311.4 0 64C0 46 12.1 30.2 29.5 25.4l88-24z" fill="currentColor"></path> </svg> +61 111 333 555 
+                                </a>
+                            </li>
+                            <li>
+                                <a class="cont-link" href="#">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"> <path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48L48 64zM0 176L0 384c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-208L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z" fill="currentColor"></path> </svg> info@australianpublishers.com.au 
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="social">
+                            <li>
+                                <a href="#" target="_blank">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"> <path d="M80 299.3V512h116V299.3h86.5l18-97.8H196v-34.6c0-51.7 20.3-71.5 72.7-71.5 16.3 0 29.4.4 37 1.2V7.9C291.4 4 256.4 0 236.2 0 129.3 0 80 50.5 80 159.4v42.1H14v97.8z"> </path> </svg>
+                                    <span class="sr-only">Facebook</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"> <path d="M100.3 448H7.4V148.9h92.9zM53.8 108.1C24.1 108.1 0 83.5 0 53.8a53.8 53.8 0 0 1 107.6 0c0 29.7-24.1 54.3-53.8 54.3zM447.9 448h-92.7V302.4c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7V448h-92.8V148.9h89.1v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V448z"></path></svg>
+                                    <span class="sr-only">LinkedIn</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"> <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"> </path> </svg>
+                                    <span class="sr-only">Instagram</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-12 col-md-8">
+                    <div class="row">
+                        <div class="col-12 col-md-3"><span class="h5">Company</span>
+                            <ul>
+                                <li><a href="index.html"> Home </a></li>
+                                <li><a href="about-us.html"> About us </a></li>
+                                <li><a href="reviews.html"> Reviews </a></li>
+                                <li><a href="contact-us.html"> Contact us </a></li>
+                                <li><a href="sitemap.html"> Sitemap </a></li>
+                                <li><a href="get-started.html"> Get Free Quote</a></li>
+                                <li><a href="become-an-author.html"> Become An Author</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-12 col-md-4"><span class="h5">Services</span>
+                            <ul>
+                                <li><a href="#"> Comic Book </a></li>
+                                <li><a href="#"> Book Marketing</a></li>
+                                <li><a href="#"> eBook Publishing</a></li>
+                                <li><a href="#"> Book Printing Services </a></li>
+                                <li><a href="#"> Book Cover Designing </a></li>
+                                <li><a href="#"> Childrens Book Publishing </a></li>
+                                <li><a href="#"> Poetry & Poem Publishing </a></li>
+                                <li><a href="#"> Book Editing & Proofreading </a></li>
+                            </ul>
+                        </div>
+                        <div class="col-12 col-md-5"><span class="h5">Security & Payments</span>
+                            <div class="s-payment">
+                                <p>We protect your privacy and never share your information with third parties. Our secure payment system ensures your transactions are both safe and reliable.</p>
+                                <div class="i-hidden i-p">
+                                    <img src="https://www.australianpublishers.com.au/assets/frontend/images/icons/no-hidden-charge.svg" class="img-fluid lazyload" alt="">
+                                    <img src="https://www.australianpublishers.com.au/assets/frontend/images/icons/money-back-guarantee.svg" class="img-fluid lazyload" alt="">
+                                </div>
+                                <div class="i-method i-p">
+                                    <img src="https://www.australianpublishers.com.au/assets/frontend/images/icons/payment-method.svg" class="img-fluid lazyload" alt="">
+                                </div>
+                                <div class="i-amazon i-p">
+                                    <img src="https://www.australianpublishers.com.au/assets/frontend/images/icons/amazon-associates.svg" class="img-fluid lazyload" alt="">
+                                    <img src="https://www.australianpublishers.com.au/assets/frontend/images/icons/clutch.svg" class="img-fluid lazyload" alt="">
+                                    <img src="https://www.australianpublishers.com.au/assets/frontend/images/icons/bark.svg"class="img-fluid lazyload" alt="">
+                                    <img src="https://www.australianpublishers.com.au/assets/frontend/images/icons/good-firms.svg" class="img-fluid lazyload" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-12 col-md-12 text-center">
+                    <span class="d-block">© 2026 - Australian Publishers. All Rights Reserved.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script defer="" src="js/bootstrap.js" type="c72f6a2fff90882ff2180662-text/javascript"></script>
+    <script src="https://www.australianpublishers.com.au/assets/frontend/js/brands-slider.js" defer></script>
+    <script src="https://www.australianpublishers.com.au/assets/frontend/js/book-slider.js" defer></script>
+    <script src="https://www.australianpublishers.com.au/assets/frontend/js/banner-slider.js" defer></script>
+    <script src="https://www.australianpublishers.com.au/assets/frontend/js/reviews-slider.js" defer></script>
+    <script src="https://www.australianpublishers.com.au/assets/frontend/js/quote.js" defer></script>
+    <script src="js/rocket-loader.min.js" data-cf-settings="c72f6a2fff90882ff2180662-|49" defer=""></script>
+</body>
+
+</html>
