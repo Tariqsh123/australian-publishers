@@ -899,6 +899,7 @@ a.btn-order{
 
 
 
+
 .terms-section {
   background: linear-gradient(0deg, #f6d067, #f6f3ea);
   padding: 90px 20px;
@@ -983,16 +984,17 @@ a.btn-order{
 }
 
 
-.double-cover-image{
-  width: 300px !important;
-  height: 210px;
-}
-.double-cover-image img{
-  height: 100%;
+
+
+
+
+
+
+.book-slider .swiper-slide img{
+  height: 220px;
   width: 100%;
-  object-fit: fill;
 }
-
-
-
-
+.double-book-cover-image{
+  height: 220px;
+  width: 250px !important;
+}
