@@ -659,11 +659,14 @@ section.main-banner{
 /* IMAGE */
 .become-an-author-image{
   flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .become-an-author-image img{
   width: 100%;
-  max-width: 480px;
+  max-width: 350px;
   border-radius: 14px;
 }
 
