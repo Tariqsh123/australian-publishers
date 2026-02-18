@@ -1001,3 +1001,7 @@ a.btn-order{
   height: 220px;
   width: 250px !important;
 }
+
+section.content-area {
+  padding-top: 0;
+}
