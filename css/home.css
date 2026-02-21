@@ -2895,12 +2895,13 @@ section.main-banner {
 }
 
 .form-bottom button {
-  background: #ffb703;
+  background: #e43935;
   border: none;
   padding: 10px 26px;
   border-radius: 25px;
   font-weight: 600;
   cursor: pointer;
+  color: white;
 }
 
 /* RIGHT INFO */
@@ -3771,4 +3772,15 @@ section.main-banner .img-box{
   .three-step-input-group label {
     text-align: left;
 }
+}
+
+section.content-form .btn-box .btn-call span {
+    color: #2c1b18 !important;
+}
+section.content-form .btn-call span small {
+    color: #000 !important;
+}
+.simple-card .img-box span{
+  padding: 10px;
+
 }

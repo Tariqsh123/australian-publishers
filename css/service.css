@@ -2245,3 +2245,7 @@ section.content-form .btn-box .btn-call .icon-box{
   background-color: white;
   color: black;
 }
+
+.cta-area .btn-call{
+  background-color: white !important;
+}
