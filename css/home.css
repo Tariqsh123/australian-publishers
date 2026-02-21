@@ -2824,7 +2824,7 @@ section.main-banner {
 
 /* Get Started */
 .get-started-clean {
-  background: linear-gradient(180deg, #fff7e6, #f7d978);
+  background: linear-gradient(180deg, #fff7e6, #3f2d82);
   padding: 80px 20px;
   padding-top: 150px;
 }
@@ -2918,7 +2918,7 @@ section.main-banner {
 }
 
 .guidelines-box {
-  background: #2b1a14;
+  background: #e43935;
   color: #fff;
   padding: 20px;
   border-radius: 12px;
