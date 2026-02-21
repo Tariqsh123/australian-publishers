@@ -1238,9 +1238,9 @@
                 justify-content: flex-start
             }
 
-            section.main-banner .img-box {
+            /* section.main-banner .img-box {
                 display: none
-            }
+            } */
         }
 
         @media (max-width:575.98px) {
@@ -1539,22 +1539,193 @@
                         </span> -->
                         <h1 class="h1">Professional <span> Book Publishing Services </span> for Australian Authors</h1>
                         <p>Kangaroo Publishers is a trusted and successful book publishing company in Australia that offers professional book publishing services that get your story released on major platforms in just a few weeks. </p>
-                            <a href="get-started.html" class="btn-live">Publish My Book</a>
+                            <!-- <a href="get-started.html" class="btn-live">Publish My Book</a>
                             <a href="contact-us.html" role="button" type="button" class="btn-order horizontal-shaking">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="28" height="24" viewBox="0 0 640 512"><path d="M208 352c114.9 0 208-78.8 208-176S322.9 0 208 0S0 78.8 0 176c0 38.6 14.7 74.3 39.6 103.4c-3.5 9.4-8.7 17.7-14.2 24.7c-4.8 6.2-9.7 11-13.3 14.3c-1.8 1.6-3.3 2.9-4.3 3.7c-.5 .4-.9 .7-1.1 .8l-.2 .2s0 0 0 0s0 0 0 0C1 327.2-1.4 334.4 .8 340.9S9.1 352 16 352c21.8 0 43.8-5.6 62.1-12.5c9.2-3.5 17.8-7.4 25.2-11.4C134.1 343.3 169.8 352 208 352zM448 176c0 112.3-99.1 196.9-216.5 207C255.8 457.4 336.4 512 432 512c38.2 0 73.9-8.7 104.7-23.9c7.5 4 16 7.9 25.2 11.4c18.3 6.9 40.3 12.5 62.1 12.5c6.9 0 13.1-4.5 15.2-11.1c2.1-6.6-.2-13.8-5.8-17.9c0 0 0 0 0 0s0 0 0 0l-.2-.2c-.2-.2-.6-.4-1.1-.8c-1-.8-2.5-2-4.3-3.7c-3.6-3.3-8.5-8.1-13.3-14.3c-5.5-7-10.7-15.4-14.2-24.7c24.9-29 39.6-64.7 39.6-103.4c0-92.8-84.9-168.9-192.6-175.5c.4 5.1 .6 10.3 .6 15.5z"fill="currentColor"></path></svg> 
                                 Consult Our Expert 
-                            </a>
+                            </a> -->
                     </div>
                     <div class="col-12 col-lg-6">
                         <div class="img-box">
-                            <img src="images/layer-capsule.webp" class="img-fluid capsule-vector" alt="layer-capsule" title="layer-capsule" loading="lazy">
-                            <img src="images/top-rated-book-publishing-agency-in-australia.webp" class="img-fluid" alt="top-rated-book-publishing-agency-in-australia" title="top-rated-book-publishing-agency-in-australia" loading="lazy">
+                            <!-- <img src="images/layer-capsule.webp" class="img-fluid capsule-vector" alt="layer-capsule" title="layer-capsule" loading="lazy">
+                            <img src="images/top-rated-book-publishing-agency-in-australia.webp" class="img-fluid" alt="top-rated-book-publishing-agency-in-australia" title="top-rated-book-publishing-agency-in-australia" loading="lazy"> -->
+                            <div class="three-step-container">
+  <form id="three-step-form" class="three-step-wrapper">
+
+    <!-- Progress Bar -->
+    <div class="three-step-progress-container">
+      <div class="three-step-progress-bar" id="three-step-progress-bar"></div>
+      <div class="three-step-progress-steps">
+        <span class="three-step-indicator active">1</span>
+        <span class="three-step-indicator">2</span>
+        <span class="three-step-indicator">3</span>
+      </div>
+    </div>
+
+    <!-- ================= STEP 1 ================= -->
+    <div class="three-step-form-step active">
+
+      <h3 class="three-step-main-heading">
+        Start Your Kangaroo Book Publication Journey
+      </h3>
+
+      <div class="three-step-question-block">
+        <h4 class="three-step-question-title">Treat Yourself With *</h4>
+
+        <label class="three-step-radio-card">
+          <input type="radio" name="three-step-treat" required>
+          <span>Free Publishing on 5 Platforms</span>
+        </label>
+
+        <label class="three-step-radio-card">
+          <input type="radio" name="three-step-treat">
+          <span>Free Cover Design</span>
+        </label>
+
+        <label class="three-step-radio-card">
+          <input type="radio" name="three-step-treat">
+          <span>Free Social Media Existence</span>
+        </label>
+      </div>
+
+      <button type="button" class="three-step-btn three-step-next-btn">
+        Continue
+      </button>
+    </div>
+
+    <!-- ================= STEP 2 ================= -->
+    <div class="three-step-form-step">
+
+      <div class="three-step-input-group">
+        <label>Do you have a manuscript ready? *</label>
+        <select required>
+          <option value="">Select an option</option>
+          <option>Yes, I'm ready to publish today</option>
+          <option>1 to 3 months</option>
+          <option>3 to 6 months</option>
+          <option>6 to 12 months</option>
+        </select>
+      </div>
+
+      <div class="three-step-input-group">
+        <label>What type of book do you plan on publishing? *</label>
+        <select required>
+          <option value="">Select Genre</option>
+          <option>Fiction</option>
+          <option>Non-Fiction</option>
+          <option>Children Book</option>
+          <option>Business</option>
+          <option>Biography</option>
+          <option>Self-Help</option>
+          <option>Other</option>
+        </select>
+      </div>
+
+      <div class="three-step-btn-group">
+        <button type="button" class="three-step-btn three-step-prev-btn">
+          Back
+        </button>
+        <button type="button" class="three-step-btn three-step-next-btn">
+          Continue
+        </button>
+      </div>
+    </div>
+
+    <!-- ================= STEP 3 ================= -->
+    <div class="three-step-form-step">
+
+      <div class="three-step-grid-2">
+        <div class="three-step-input-group">
+          <label>Name *</label>
+          <input type="text" required>
+        </div>
+
+        <div class="three-step-input-group">
+          <label>Email *</label>
+          <input type="email" required>
+        </div>
+      </div>
+
+      <div class="three-step-input-group">
+        <label>Phone *</label>
+        <div class="three-step-phone-wrapper">
+          <input type="tel" placeholder="Phone number" required>
+        </div>
+      </div>
+
+      <div class="three-step-input-group">
+        <label>Description *</label>
+        <textarea rows="4" required></textarea>
+      </div>
+
+      <div class="three-step-btn-group">
+        <button type="button" class="three-step-btn three-step-prev-btn">
+          Back
+        </button>
+        <button type="submit" class="three-step-btn three-step-submit-btn">
+          Submit Request
+        </button>
+      </div>
+    </div>
+
+  </form>
+</div>
 
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+
+<script>
+const threeStepSteps = document.querySelectorAll(".three-step-form-step");
+const threeStepNextBtns = document.querySelectorAll(".three-step-next-btn");
+const threeStepPrevBtns = document.querySelectorAll(".three-step-prev-btn");
+const threeStepProgressBar = document.getElementById("three-step-progress-bar");
+const threeStepIndicators = document.querySelectorAll(".three-step-indicator");
+
+let threeStepCurrent = 0;
+
+function threeStepUpdate() {
+  threeStepSteps.forEach((step, index) => {
+    step.classList.toggle("active", index === threeStepCurrent);
+  });
+
+  threeStepIndicators.forEach((indicator, index) => {
+    indicator.classList.toggle("active", index <= threeStepCurrent);
+  });
+
+  threeStepProgressBar.style.width =
+    (threeStepCurrent / (threeStepSteps.length - 1)) * 100 + "%";
+}
+
+threeStepNextBtns.forEach(btn => {
+  btn.addEventListener("click", () => {
+    if (threeStepCurrent < threeStepSteps.length - 1) {
+      threeStepCurrent++;
+      threeStepUpdate();
+    }
+  });
+});
+
+threeStepPrevBtns.forEach(btn => {
+  btn.addEventListener("click", () => {
+    if (threeStepCurrent > 0) {
+      threeStepCurrent--;
+      threeStepUpdate();
+    }
+  });
+});
+
+document.getElementById("three-step-form")
+.addEventListener("submit", function(e){
+  e.preventDefault();
+  alert("Your request has been submitted successfully!");
+});
+
+threeStepUpdate();
+</script>
+
         <section class="top-brands text-center">
             <div class="container-fluid px-0">
                 <div class="swiper brand-slider">
