@@ -1462,29 +1462,79 @@
             <nav class="navbar navbar-expand-lg">
                 <div class="container-fluid">
                     <a class="navbar-brand" href="index.html" title="Home">
-    <video class="img-fluid logo-video" muted playsinline>
+
+    <!-- Image (First) -->
+    <img src="images/logo.webp"
+         class="img-fluid order-page-none logo-img"
+         alt="australian-publishers"
+         title="australian-publishers"
+         loading="lazy">
+
+    <!-- Video -->
+    <video class="img-fluid order-page-none logo-video" muted playsinline>
         <source src="videos/logo.mp4" type="video/mp4">
     </video>
+
 </a>
 <script>
-document.addEventListener("DOMContentLoaded", function() {
-    const video = document.querySelector(".logo-video");
+document.addEventListener("DOMContentLoaded", function () {
 
-    function playWithDelay() {
+    const video = document.querySelector(".logo-video");
+    const image = document.querySelector(".logo-img");
+
+    function showVideo() {
+        image.style.opacity = "0";
+        image.style.transform = "scale(0.96)";
+
         setTimeout(() => {
+            image.style.display = "none";
+
+            video.style.display = "block";
+            video.style.opacity = "0";
+            video.currentTime = 0;
             video.play();
-        }, 3000); // 3 sec pause before every play
+
+            requestAnimationFrame(() => {
+                video.style.opacity = "1";
+                video.style.transform = "scale(1)";
+            });
+
+        }, 400); // Fast transition
     }
 
-    // Pehli baar page load pe
-    playWithDelay();
+    function showImage() {
+        video.style.opacity = "0";
+        video.style.transform = "scale(0.96)";
 
-    // Jab video khatam ho
-    video.addEventListener("ended", function() {
-        video.currentTime = 0; // reset
-        video.pause();
-        playWithDelay(); // phir se 3 sec pause
-    });
+        setTimeout(() => {
+            video.pause();
+            video.style.display = "none";
+
+            image.style.display = "block";
+            image.style.opacity = "0";
+            image.style.transform = "scale(1.04)";
+
+            requestAnimationFrame(() => {
+                image.style.opacity = "1";
+                image.style.transform = "scale(1)";
+            });
+
+            // 5 sec hold before video
+            setTimeout(showVideo, 5000);
+
+        }, 400);
+    }
+
+    // Start with image visible
+    image.style.display = "block";
+    video.style.display = "none";
+
+    // First time, 5 sec image → video
+    setTimeout(showVideo, 5000);
+
+    // Video end → image
+    video.addEventListener("ended", showImage);
+
 });
 </script>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">

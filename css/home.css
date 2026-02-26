@@ -1552,10 +1552,22 @@ header .navbar .navbar-brand img {
   width: auto;
   height: 80px;
 }
+.navbar-brand {
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+
+.logo-img,
 .logo-video {
     height: 80px;
     width: auto;
     object-fit: contain;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.logo-video {
+    display: none;
 }
 header .navbar .navbar-nav li {
   font-family: Saira, "sans-serif";
