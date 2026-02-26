@@ -1458,8 +1458,81 @@
             <nav class="navbar navbar-expand-lg">
                 <div class="container-fluid">
                     <a class="navbar-brand" href="index.html" title="Home">
-                        <img src="images/logo.webp" class="img-fluid order-page-none" alt="australian-publishers" title="australian-publishers" loading="lazy">
-                    </a>
+
+    <!-- Image (First) -->
+    <img src="images/logo.webp"
+         class="img-fluid order-page-none logo-img"
+         alt="australian-publishers"
+         title="australian-publishers"
+         loading="lazy">
+
+    <!-- Video -->
+    <video class="img-fluid order-page-none logo-video" muted playsinline>
+        <source src="videos/logo.mp4" type="video/mp4">
+    </video>
+
+</a>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const video = document.querySelector(".logo-video");
+    const image = document.querySelector(".logo-img");
+
+    function showVideo() {
+        image.style.opacity = "0";
+        image.style.transform = "scale(0.96)";
+
+        setTimeout(() => {
+            image.style.display = "none";
+
+            video.style.display = "block";
+            video.style.opacity = "0";
+            video.currentTime = 0;
+            video.play();
+
+            requestAnimationFrame(() => {
+                video.style.opacity = "1";
+                video.style.transform = "scale(1)";
+            });
+
+        }, 400); // Fast transition
+    }
+
+    function showImage() {
+        video.style.opacity = "0";
+        video.style.transform = "scale(0.96)";
+
+        setTimeout(() => {
+            video.pause();
+            video.style.display = "none";
+
+            image.style.display = "block";
+            image.style.opacity = "0";
+            image.style.transform = "scale(1.04)";
+
+            requestAnimationFrame(() => {
+                image.style.opacity = "1";
+                image.style.transform = "scale(1)";
+            });
+
+            // 5 sec hold before video
+            setTimeout(showVideo, 5000);
+
+        }, 400);
+    }
+
+    // Start with image visible
+    image.style.display = "block";
+    video.style.display = "none";
+
+    // First time, 5 sec image → video
+    setTimeout(showVideo, 5000);
+
+    // Video end → image
+    video.addEventListener("ended", showImage);
+
+});
+</script>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -1469,9 +1542,9 @@
                                 <p>Your One-Stop Publishing Partner In Australia!</p>
                             </li>
                             <li class="nav-item">
-                                <a href="#" title="Phone" class="nav-link">
+                                <a href="tel:+61261902912" title="Phone" class="nav-link">
                                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"> <path d="M280 0C408.1 0 512 103.9 512 232c0 13.3-10.7 24-24 24s-24-10.7-24-24c0-101.6-82.4-184-184-184c-13.3 0-24-10.7-24-24s10.7-24 24-24zm8 192a32 32 0 1 1 0 64 32 32 0 1 1 0-64zm-32-72c0-13.3 10.7-24 24-24c75.1 0 136 60.9 136 136c0 13.3-10.7 24-24 24s-24-10.7-24-24c0-48.6-39.4-88-88-88c-13.3 0-24-10.7-24-24zM117.5 1.4c19.4-5.3 39.7 4.6 47.4 23.2l40 96c6.8 16.3 2.1 35.2-11.6 46.3L144 207.3c33.3 70.4 90.3 127.4 160.7 160.7L345 318.7c11.2-13.7 30-18.4 46.3-11.6l96 40c18.6 7.7 28.5 28 23.2 47.4l-24 88C481.8 499.9 466 512 448 512C200.6 512 0 311.4 0 64C0 46 12.1 30.2 29.5 25.4l88-24z" fill="currentColor"></path> </svg>
-                                     +61 111 222 333 
+                                     +61261902912 
                                 </a>
                             </li>
                         </ul>
@@ -1652,36 +1725,59 @@
                         <address>908 1D Broughton Street, Parramatta NSW, Australia 2150</address>
                         <ul>
                             <li>
-                                <a class="cont-link" href="#" title="Phone">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"> <path d="M280 0C408.1 0 512 103.9 512 232c0 13.3-10.7 24-24 24s-24-10.7-24-24c0-101.6-82.4-184-184-184c-13.3 0-24-10.7-24-24s10.7-24 24-24zm8 192a32 32 0 1 1 0 64 32 32 0 1 1 0-64zm-32-72c0-13.3 10.7-24 24-24c75.1 0 136 60.9 136 136c0 13.3-10.7 24-24 24s-24-10.7-24-24c0-48.6-39.4-88-88-88c-13.3 0-24-10.7-24-24zM117.5 1.4c19.4-5.3 39.7 4.6 47.4 23.2l40 96c6.8 16.3 2.1 35.2-11.6 46.3L144 207.3c33.3 70.4 90.3 127.4 160.7 160.7L345 318.7c11.2-13.7 30-18.4 46.3-11.6l96 40c18.6 7.7 28.5 28 23.2 47.4l-24 88C481.8 499.9 466 512 448 512C200.6 512 0 311.4 0 64C0 46 12.1 30.2 29.5 25.4l88-24z" fill="currentColor"></path> </svg> +61 111 333 555 
+                                <a class="cont-link" href="tel:+61261902912" title="Phone">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"> <path d="M280 0C408.1 0 512 103.9 512 232c0 13.3-10.7 24-24 24s-24-10.7-24-24c0-101.6-82.4-184-184-184c-13.3 0-24-10.7-24-24s10.7-24 24-24zm8 192a32 32 0 1 1 0 64 32 32 0 1 1 0-64zm-32-72c0-13.3 10.7-24 24-24c75.1 0 136 60.9 136 136c0 13.3-10.7 24-24 24s-24-10.7-24-24c0-48.6-39.4-88-88-88c-13.3 0-24-10.7-24-24zM117.5 1.4c19.4-5.3 39.7 4.6 47.4 23.2l40 96c6.8 16.3 2.1 35.2-11.6 46.3L144 207.3c33.3 70.4 90.3 127.4 160.7 160.7L345 318.7c11.2-13.7 30-18.4 46.3-11.6l96 40c18.6 7.7 28.5 28 23.2 47.4l-24 88C481.8 499.9 466 512 448 512C200.6 512 0 311.4 0 64C0 46 12.1 30.2 29.5 25.4l88-24z" fill="currentColor"></path> </svg> +61261902912 
                                 </a>
                             </li>
                             <li>
-                                <a class="cont-link" href="#" title="Email">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"> <path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48L48 64zM0 176L0 384c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-208L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z" fill="currentColor"></path> </svg> info@australianpublishers.com.au 
+                                <a class="cont-link" href="mailto:Info@kangaroopublishers.com" title="Email">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"> <path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48L48 64zM0 176L0 384c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-208L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z" fill="currentColor"></path> </svg> Info@kangaroopublishers.com 
                                 </a>
                             </li>
                         </ul>
                         <ul class="social">
-                            <li>
-                                <a href="#" target="_blank" title="Facebook">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"> <path d="M80 299.3V512h116V299.3h86.5l18-97.8H196v-34.6c0-51.7 20.3-71.5 72.7-71.5 16.3 0 29.4.4 37 1.2V7.9C291.4 4 256.4 0 236.2 0 129.3 0 80 50.5 80 159.4v42.1H14v97.8z"> </path> </svg>
-                                    <span class="sr-only">Facebook</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" target="_blank" title="LinkedIn">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"> <path d="M100.3 448H7.4V148.9h92.9zM53.8 108.1C24.1 108.1 0 83.5 0 53.8a53.8 53.8 0 0 1 107.6 0c0 29.7-24.1 54.3-53.8 54.3zM447.9 448h-92.7V302.4c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7V448h-92.8V148.9h89.1v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V448z"></path></svg>
-                                    <span class="sr-only">LinkedIn</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" target="_blank" title="Instagram">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"> <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"> </path> </svg>
-                                    <span class="sr-only">Instagram</span>
-                                </a>
-                            </li>
-                        </ul>
+    <li>
+        <a href="https://www.facebook.com/share/1DFoo8Lew1/" target="_blank" title="Facebook">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                <path d="M80 299.3V512h116V299.3h86.5l18-97.8H196v-34.6c0-51.7 20.3-71.5 72.7-71.5 16.3 0 29.4.4 37 1.2V7.9C291.4 4 256.4 0 236.2 0 129.3 0 80 50.5 80 159.4v42.1H14v97.8z"></path>
+            </svg>
+            <span class="sr-only">Facebook</span>
+        </a>
+    </li>
+    <li>
+        <a href="https://www.linkedin.com/company/kangaroo-publishers/" target="_blank" title="LinkedIn">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                <path d="M100.3 448H7.4V148.9h92.9zM53.8 108.1C24.1 108.1 0 83.5 0 53.8a53.8 53.8 0 0 1 107.6 0c0 29.7-24.1 54.3-53.8 54.3zM447.9 448h-92.7V302.4c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7V448h-92.8V148.9h89.1v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V448z"></path>
+            </svg>
+            <span class="sr-only">LinkedIn</span>
+        </a>
+    </li>
+    <li>
+        <a href="https://www.instagram.com/kangaroopublishers?igsh=MXR0bnQycmk5ajlveA==" target="_blank" title="Instagram">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"> <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"> </path> </svg>
+
+            <span class="sr-only">Instagram</span>
+        </a>
+    </li>
+    <li>
+        <a href="https://youtube.com/@kangaroopublishers?si=vUg_IGj2DSwVSC6E" target="_blank" title="YouTube">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                <path d="M549.655 124.083c-6.281-23.737-24.855-42.311-48.591-48.591C456.686 64 288 64 288 64s-168.686 0-213.064 11.492c-23.737 6.281-42.31 24.854-48.591 48.591C16 168.462 16 256 16 256s0 87.538 10.345 131.917c6.281 23.737 24.854 42.311 48.591 48.591C119.314 448 288 448 288 448s168.686 0 213.064-11.492c23.737-6.281 42.31-24.854 48.591-48.591C560 343.538 560 256 560 256s0-87.538-10.345-131.917zM232 334V178l142 78-142 78z"/>
+            </svg>
+            <span class="sr-only">YouTube</span>
+        </a>
+    </li>
+    <li>
+        <a href="https://pin.it/314cmKCPp" target="_blank" title="Pinterest">
+            <svg  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="256" height="256" viewBox="0 0 256 256" xml:space="preserve">
+<g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;" transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)">
+	<path d="M 25.334 90 c 3.415 -2.853 8.943 -12.256 10.189 -17.048 c 0.671 -2.581 3.437 -13.114 3.437 -13.114 c 1.799 3.43 7.054 6.334 12.644 6.334 c 16.638 0 28.626 -15.301 28.626 -34.312 C 80.229 13.636 65.357 0 46.22 0 C 22.415 0 9.771 15.981 9.771 33.382 c 0 8.091 4.307 18.164 11.198 21.371 c 1.045 0.486 1.604 0.272 1.845 -0.738 c 0.183 -0.767 1.113 -4.513 1.532 -6.256 c 0.134 -0.557 0.068 -1.036 -0.383 -1.582 c -2.279 -2.764 -4.105 -7.848 -4.105 -12.589 c 0 -12.167 9.213 -23.94 24.909 -23.94 c 13.552 0 23.042 9.235 23.042 22.443 c 0 14.923 -7.536 25.261 -17.341 25.261 c -5.415 0 -9.469 -4.478 -8.169 -9.968 c 1.555 -6.558 4.569 -13.634 4.569 -18.367 c 0 -4.237 -2.274 -7.771 -6.98 -7.771 c -5.536 0 -9.982 5.727 -9.982 13.397 c 0 4.886 1.65 8.19 1.65 8.19 s -5.467 23.115 -6.469 27.421 c -1.109 4.764 -0.674 11.476 -0.191 15.84 L 25.334 90 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: white; fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round"/>
+</g>
+</svg>
+            <span class="sr-only">Pinterest</span>
+        </a>
+    </li>
+</ul>
                     </div>
                 </div>
                 <div class="col-12 col-md-8">
