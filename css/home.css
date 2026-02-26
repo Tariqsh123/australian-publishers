@@ -1552,10 +1552,10 @@ header .navbar .navbar-brand img {
   width: auto;
   height: 80px;
 }
-header .navbar .navbar-brand video {
-  height: 70px;
-  width: auto;
-  object-fit: contain;
+.logo-video {
+    height: 80px;
+    width: auto;
+    object-fit: contain;
 }
 header .navbar .navbar-nav li {
   font-family: Saira, "sans-serif";
