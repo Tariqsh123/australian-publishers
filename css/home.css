@@ -2280,6 +2280,7 @@ section.content-form .btn-call {
     display: none;
   } */
   section.our-services .simple-card img {
+    top: -50px;
     left: 50%;
     transform: translateX(-50%);
   }
@@ -3037,7 +3038,7 @@ section.main-banner {
 .become-an-author-step {
   display: inline-block;
   font-weight: 700;
-  color: #8b5e3c;
+  color: #e43935;
   margin-bottom: 10px;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -3051,7 +3052,7 @@ section.main-banner {
 
 .become-an-author-content p {
   font-size: 17px;
-  color: #444;
+  color: #fff;
   line-height: 1.8;
 }
 
@@ -3126,7 +3127,7 @@ section.main-banner {
 .sitemap-agency-subheading {
   font-size: 28px;
   font-weight: 700;
-  color: #8b5e3c;
+  color: #3f2d82;
   margin-bottom: 30px;
   position: relative;
 }
@@ -3135,7 +3136,7 @@ section.main-banner {
   content: "";
   width: 70px;
   height: 4px;
-  background: linear-gradient(90deg, #3f2d82, #d9a441);
+  background: linear-gradient(90deg, #e43935, #e43935);
   display: block;
   margin-top: 10px;
   border-radius: 4px;
@@ -3168,7 +3169,7 @@ section.main-banner {
 }
 
 .sitemap-agency-list li a:hover {
-  color: #8b5e3c;
+  color: #e43935;
   transform: translateX(6px);
 }
 
@@ -3801,4 +3802,7 @@ section.content-form .btn-call span small {
 .simple-card .img-box span{
   padding: 10px;
 
+}
+header{
+  background-color: white;
 }

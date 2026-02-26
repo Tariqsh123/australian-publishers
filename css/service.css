@@ -2249,3 +2249,13 @@ section.content-form .btn-box .btn-call .icon-box{
 .cta-area .btn-call{
   background-color: white !important;
 }
+@media (max-width: 991px) {
+  /* section.main-banner .img-box {
+    display: none;
+  } */
+  section.our-services .simple-card img {
+    top: 0px !important;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
