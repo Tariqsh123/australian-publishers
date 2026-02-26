@@ -1547,9 +1547,10 @@ header .navbar .nav-item .btn-order:after {
   }
 }
 header .navbar .navbar-brand img {
-  -o-object-fit: scale-down;
-  object-fit: scale-down;
-  width: 212px;
+  /* -o-object-fit: scale-down; */
+  object-fit: contain;
+  width: auto;
+  height: 80px;
 }
 header .navbar .navbar-nav li {
   font-family: Saira, "sans-serif";
